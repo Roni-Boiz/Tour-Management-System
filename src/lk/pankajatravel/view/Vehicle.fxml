@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="615.0" maxWidth="800.0" minHeight="615.0" minWidth="800.0" prefHeight="615.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.pankajatravel.controller.VehicleController">
+   <children>
+      <HBox prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="615.0" prefWidth="300.0">
+               <children>
+                  <ImageView fitHeight="615.0" fitWidth="300.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../img/photostock-vector-vector-cartoon-car-rear-set-with-back-view-of-six-different-types-of-car-pick-up-truck-truck-mini.jpg" />
+                     </image>
+                  </ImageView>
+               </children></Pane>
+            <Pane prefHeight="600.0" prefWidth="515.0" style="-fx-border-color: black; -fx-border-width: 0px 0px 0px 1px;">
+               <children>
+                  <Pane layoutX="12.0" layoutY="13.0" prefHeight="454.0" prefWidth="334.0">
+                     <children>
+                        <VBox prefHeight="454.0" prefWidth="334.0">
+                           <children>
+                              <JFXTextField fx:id="txtVehicleID" labelFloat="true" onAction="#txtVehicleIDAction" promptText="Vehicle ID">
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" left="10.0" right="10.0" top="20.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXTextField fx:id="txtVehicleNum" labelFloat="true" onAction="#txtVehicleNumAction" prefHeight="30.0" prefWidth="310.0" promptText="Vehicle Number">
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </JFXTextField>
+                              <Label text="Vehicle Category">
+                                 <VBox.margin>
+                                    <Insets left="10.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <JFXComboBox fx:id="cmbCategory" onKeyPressed="#cmbCategoryKeyPressed" prefHeight="30.0" prefWidth="310.0" promptText="Select">
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" left="10.0" right="10.0" />
+                                 </VBox.margin>
+                              </JFXComboBox>
+                              <JFXTextField fx:id="txtYOM" labelFloat="true" onAction="#txtYOMAction" promptText="Year of Manufacture">
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXTextField fx:id="txtVehicleName" labelFloat="true" onAction="#txtVehicleNameAction" promptText="Name">
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXTextField fx:id="txtPricePer1Km" labelFloat="true" onAction="#txtPricePer1KmAction" promptText="Price Pay per 1Km" text="Rs.">
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </JFXTextField>
+                              <Label text="Owner">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <JFXComboBox fx:id="cmbOwner" onKeyPressed="#cmbOwnerKeyPressed" prefHeight="30.0" prefWidth="310.0" promptText="Select">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" />
+                                 </VBox.margin>
+                              </JFXComboBox>
+                           </children>
+                           <effect>
+                              <Lighting bumpInput="$null">
+                                 <light>
+                                    <Light.Distant />
+                                 </light>
+                              </Lighting>
+                           </effect>
+                        </VBox>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="338.0" layoutY="106.0" prefHeight="245.0" prefWidth="163.0">
+                     <children>
+                        <VBox alignment="TOP_CENTER" prefHeight="245.0" prefWidth="163.0">
+                           <children>
+                              <JFXButton fx:id="btnAddVehicle" buttonType="RAISED" onMouseClicked="#btnAddVehicleMouseClicked" prefHeight="26.0" prefWidth="100.0" style="-fx-background-color: #dadada;" text="Add Vehicle">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
+                                 </VBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="btnUpdate" buttonType="RAISED" onMouseClicked="#btnUpdateMouseClicked" prefHeight="26.0" prefWidth="100.0" style="-fx-background-color: #dadada;" text="Update ">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="btnRemove" buttonType="RAISED" onMouseClicked="#btnRemoveMouseClicked" prefHeight="26.0" prefWidth="100.0" style="-fx-background-color: #dadada;" text="Remove">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton buttonType="RAISED" onMouseClicked="#btnViewAllMouseClicked" prefHeight="26.0" prefWidth="100.0" style="-fx-background-color: #dadada;" text="View All">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton buttonType="RAISED" layoutX="49.0" layoutY="171.0" onMouseClicked="#btnMoreDetailMouseClicked" prefHeight="26.0" prefWidth="100.0" style="-fx-background-color: #dadada;" text="More Details">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </VBox>
+                     </children></Pane>
+                  <Pane layoutX="12.0" layoutY="471.0" prefHeight="130.0" prefWidth="334.0">
+                     <children>
+                        <JFXTextField fx:id="txtOwnerName" labelFloat="true" layoutX="12.0" layoutY="14.0" onAction="#txtOwnerNameAction" prefHeight="25.0" prefWidth="310.0" promptText="Owner Name">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtOwnerMobileNo" labelFloat="true" layoutX="14.0" layoutY="77.0" onAction="#txtOwnerMobileNoAction" prefHeight="25.0" prefWidth="310.0" promptText="Mobile Number">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </JFXTextField>
+                     </children>
+                  </Pane>
+                  <JFXToggleButton fx:id="tBtnEdit" contentDisplay="RIGHT" layoutX="401.0" onAction="#tBtnEditAction" text="Edit">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </JFXToggleButton>
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

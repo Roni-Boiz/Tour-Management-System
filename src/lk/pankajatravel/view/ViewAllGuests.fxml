@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.pankajatravel.controller.ViewAllGuestsController">
+   <children>
+      <FontAwesomeIcon iconName="USER" layoutX="51.0" layoutY="66.0" size="36px" text="" wrappingWidth="29.88572120666504" />
+      <Label layoutX="91.0" layoutY="27.0" prefHeight="50.0" prefWidth="246.0" text="Guest Details">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblGuest" editable="true" fixedCellSize="0.0" layoutX="24.0" layoutY="94.0" pickOnBounds="false" prefHeight="602.0" prefWidth="1534.0" tableMenuButtonVisible="true">
+         <columns>
+            <TableColumn minWidth="0.0" prefWidth="69.59997177124023" text="GID" />
+            <TableColumn minWidth="0.0" prefWidth="104.79998779296875" text="F_Name" />
+            <TableColumn minWidth="0.0" prefWidth="104.80003356933594" text="L_Name" />
+            <TableColumn minWidth="0.79998779296875" prefWidth="124.0" text="Country" />
+            <TableColumn prefWidth="143.20001220703125" text="Mobile_No" />
+            <TableColumn minWidth="0.0" prefWidth="145.5999755859375" text="Email" />
+            <TableColumn prefWidth="132.0" text="Flight_No" />
+            <TableColumn prefWidth="148.800048828125" text="Airport" />
+            <TableColumn prefWidth="133.599853515625" text="Arrive_Date" />
+            <TableColumn prefWidth="138.400146484375" text="Arrived_Time" />
+            <TableColumn minWidth="0.0" prefWidth="132.0" text="Deparcher_Date" />
+            <TableColumn minWidth="0.0" prefWidth="139.2000732421875" text="Deparcher_Time" />
+         </columns>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </TableView>
+      <JFXButton buttonType="RAISED" layoutX="1496.0" layoutY="25.0" onMouseClicked="#btnPrintMouseClicked" prefHeight="26.0" prefWidth="54.0" style="-fx-background-color: #DADADA;">
+         <graphic>
+            <FontAwesomeIcon iconName="PRINT" size="3em" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>

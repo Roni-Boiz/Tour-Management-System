@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.pankajatravel.controller.ViewAllGuidesController">
+   <children>
+      <Label layoutX="68.0" layoutY="21.0" prefHeight="55.0" prefWidth="245.0" text="Guide Details">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <FontAwesomeIcon iconName="MALE" layoutX="35.0" layoutY="62.0" size="36px" />
+      <TableView fx:id="tblGuide" layoutX="29.0" layoutY="96.0" prefHeight="606.0" prefWidth="1530.0" tableMenuButtonVisible="true">
+        <columns>
+          <TableColumn prefWidth="77.60003280639648" text="GID" />
+          <TableColumn prefWidth="161.59999084472656" text="First Name" />
+            <TableColumn minWidth="0.0" prefWidth="161.60003662109375" text="Last Name" />
+            <TableColumn minWidth="0.0" prefWidth="150.39993286132812" text="NIC" />
+            <TableColumn minWidth="0.0" prefWidth="162.39999389648438" text="Address" />
+            <TableColumn prefWidth="169.60003662109375" text="Year of Exp" />
+            <TableColumn prefWidth="164.0" text="Mobile No" />
+            <TableColumn prefWidth="156.0001220703125" text="Email Address" />
+            <TableColumn prefWidth="166.4000244140625" text="Vehicle" />
+            <TableColumn minWidth="0.0" prefWidth="153.599853515625" text="Guide Licence" />
+        </columns>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </TableView>
+      <JFXButton buttonType="RAISED" layoutX="1497.0" layoutY="27.0" onMouseClicked="#btnPrintMouseClicked" prefHeight="26.0" prefWidth="54.0" style="-fx-background-color: #DADADA;">
+         <graphic>
+            <FontAwesomeIcon iconName="PRINT" size="3em" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>

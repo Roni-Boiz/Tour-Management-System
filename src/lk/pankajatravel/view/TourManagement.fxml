@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="615.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.pankajatravel.controller.TourManagementController">
+   <children>
+      <HBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane prefHeight="600.0" prefWidth="300.0">
+               <children>
+                  <ImageView fitHeight="615.0" fitWidth="364.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/tour4%20edit.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane prefHeight="600.0" prefWidth="500.0">
+               <children>
+                  <Label layoutX="21.0" layoutY="33.0" prefHeight="17.0" prefWidth="208.0" text="Current Tours" underline="true">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="tblCurrentTours" layoutX="21.0" layoutY="78.0" prefHeight="226.0" prefWidth="465.0">
+                    <columns>
+                      <TableColumn prefWidth="56.79998779296875" text="Tour ID" />
+                      <TableColumn prefWidth="78.4000244140625" text="Start Date" />
+                        <TableColumn prefWidth="81.5999755859375" text="End Date" />
+                        <TableColumn prefWidth="86.4000244140625" text="Guest Name" />
+                        <TableColumn minWidth="3.20001220703125" prefWidth="92.79998779296875" text="Guide Name" />
+                        <TableColumn prefWidth="64.800048828125" text="Members" />
+                    </columns>
+                  </TableView>
+                  <JFXButton fx:id="btnNewTour" buttonType="RAISED" layoutX="79.0" layoutY="377.0" onMouseClicked="#newTourMouseClicked" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #dadada;" text="New Tour">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="284.0" layoutY="377.0" onMouseClicked="#btnViewTourDetailsMouseClicked" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #dadada;" text="View Tour Details">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></JFXButton>
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

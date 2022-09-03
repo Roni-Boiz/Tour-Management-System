@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<TabPane fx:id="tabPaneHotel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1024.0" tabClosingPolicy="UNAVAILABLE" tabMinWidth="200.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.pankajatravel.controller.SearchHotelController">
+  <tabs>
+    <Tab text="Search Hotel">
+      <content>
+        <AnchorPane maxWidth="-Infinity" minHeight="0.0" minWidth="-Infinity" prefHeight="180.0" prefWidth="1024.0">
+               <children>
+                  <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="1024.0" style="-fx-background-color: #454545;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label fx:id="lblHeading1" layoutX="371.0" layoutY="20.0" text="Hotel Details" textFill="WHITE">
+                           <font>
+                              <Font name="Copperplate Gothic Bold" size="36.0" />
+                           </font>
+                        </Label>
+                        <JFXButton alignment="CENTER" defaultButton="true" graphicTextGap="10.0" onMouseClicked="#btnBackToHotelMouseClicked" prefHeight="80.0" prefWidth="191.0" text="Back to Hotel Management" textFill="WHITE" wrapText="true">
+                           <graphic>
+                              <FontAwesomeIcon fill="WHITE" iconName="ARROW_CIRCLE_LEFT" size="4em" />
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                     </children>
+                  </Pane>
+                  <Text layoutX="97.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search Hotel By" wrappingWidth="328.53675842285156">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Text>
+                  <JFXComboBox fx:id="cmbSearchOption" layoutX="97.0" layoutY="141.0" onKeyPressed="#cmbSearchOptionKeyPressed" prefHeight="26.0" prefWidth="262.0" promptText="Select an Option" />
+                  <TextField fx:id="txtSearchData" layoutX="403.0" layoutY="141.0" onAction="#txtSearchDataAction" prefHeight="26.0" prefWidth="202.0" promptText="Search" AnchorPane.leftAnchor="403.0" />
+                  <FontAwesomeIcon iconName="SEARCH" layoutX="53.0" layoutY="131.0" size="3em" />
+                  <TableView fx:id="tblHotel" layoutX="53.0" layoutY="213.0" onMouseClicked="#tblHotelMouseClicked" prefHeight="448.0" prefWidth="943.0" tableMenuButtonVisible="true">
+                     <columns>
+                        <TableColumn prefWidth="104.79998016357422" text="Hotel ID" />
+                        <TableColumn minWidth="0.0" prefWidth="157.6000213623047" text="Name" />
+                        <TableColumn minWidth="0.0" prefWidth="185.5999755859375" text="Address" />
+                        <TableColumn prefWidth="154.39996337890625" text="Telephone Number" />
+                        <TableColumn prefWidth="176.00006103515625" text="Email Address" />
+                        <TableColumn minWidth="0.0" prefWidth="146.39990234375" text="Accommodation" />
+                     </columns>
+                  </TableView>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Update Hotel Details">
+      <content>
+        <AnchorPane maxWidth="-Infinity" minHeight="0.0" minWidth="-Infinity" prefHeight="180.0" prefWidth="1024.0">
+               <children>
+                  <AnchorPane id="AnchorPane" prefHeight="690.0" prefWidth="1024.0">
+                     <children>
+                        <Pane layoutX="20.0" layoutY="20.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="800.0" style="-fx-background-color: #454545;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label fx:id="lblHeading" layoutX="371.0" layoutY="20.0" text="Hotel Details" textFill="WHITE">
+                                 <font>
+                                    <Font name="Copperplate Gothic Bold" size="36.0" />
+                                 </font>
+                              </Label>
+                              <JFXButton defaultButton="true" onMouseClicked="#btnBackMouseClicked" prefHeight="80.0" prefWidth="69.0" textFill="WHITE">
+                                 <graphic>
+                                    <FontAwesomeIcon fill="WHITE" iconName="ARROW_CIRCLE_LEFT" size="4em" />
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXButton>
+                           </children>
+                        </Pane>
+                        <Label layoutX="174.0" layoutY="119.0" text="Search By Hotel ID">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtSearchHtlID" layoutX="172.0" layoutY="138.0" onAction="#txtSearchHtlIDAction" prefHeight="26.0" prefWidth="254.0" />
+                        <JFXToggleButton fx:id="tBtnEdit" contentDisplay="BOTTOM" layoutX="859.0" layoutY="95.0" onAction="#tBtnEditAction" text="Edit">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </JFXToggleButton>
+                        <Separator layoutY="203.0" prefHeight="3.0" prefWidth="1024.0" />
+                        <JFXTextField fx:id="txtHotelID" labelFloat="true" layoutX="174.0" layoutY="257.0" onAction="#txtHotelIDAction" prefHeight="30.0" prefWidth="254.0" promptText="Hotel ID">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtName" labelFloat="true" layoutX="174.0" layoutY="319.0" onAction="#txtNameAction" prefHeight="30.0" prefWidth="254.0" promptText="Name">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtAddress" labelFloat="true" layoutX="588.0" layoutY="319.0" onAction="#txtAddressAction" prefHeight="30.0" prefWidth="254.0" promptText="Address">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtTelNo" labelFloat="true" layoutX="173.0" layoutY="381.0" onAction="#txtTelNoAction" prefHeight="30.0" prefWidth="254.0" promptText="Telephone Number" text="(+94)">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtEmailAddress" labelFloat="true" layoutX="588.0" layoutY="381.0" onAction="#txtEmailAddressAction" prefWidth="254.0" promptText="Email Address">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <HBox alignment="CENTER_LEFT" layoutX="173.0" layoutY="443.0" prefHeight="40.0" prefWidth="303.0">
+                           <children>
+                              <Label prefHeight="20.0" prefWidth="122.0" text="Accommodation">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <JFXRadioButton fx:id="rBtnYes" onAction="#rBtnYesAction" prefHeight="18.0" prefWidth="41.0" text="Yes">
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </JFXRadioButton>
+                              <JFXRadioButton fx:id="rBtnNo" layoutX="130.0" layoutY="23.0" onAction="#rBtnNoAction" prefHeight="18.0" prefWidth="41.0" text="No" />
+                           </children>
+                        </HBox>
+                        <JFXButton fx:id="btnUpdate" buttonType="RAISED" defaultButton="true" layoutX="588.0" layoutY="597.0" onMouseClicked="#btnUpdateMouseClicked" prefHeight="26.0" prefWidth="148.0" style="-fx-background-color: #DADADA;" text="Update Hotel" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></JFXButton>
+                        <JFXButton fx:id="btnRemove" buttonType="RAISED" defaultButton="true" layoutX="280.0" layoutY="597.0" onMouseClicked="#btnRemoveMouseClicked" prefHeight="26.0" prefWidth="148.0" style="-fx-background-color: #DADADA;" text="Remove Hotel" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></JFXButton>
+                     </children>
+                  </AnchorPane>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>

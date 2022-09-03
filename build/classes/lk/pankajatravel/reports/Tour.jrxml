@@ -1,0 +1,618 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Tour" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="20880e3b-c4d8-4dac-abc6-ca33b5c13ce7">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="projecttourDatabaseConnection"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<subDataset name="Dataset1" uuid="6d57fe84-36d2-4df7-8655-42eb4bc88caf">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+	</subDataset>
+	<parameter name="tourID" class="java.lang.String"/>
+	<parameter name="gstName" class="java.lang.String"/>
+	<parameter name="arriveDate" class="java.lang.String"/>
+	<parameter name="arriveAirport" class="java.lang.String"/>
+	<parameter name="arriveTime" class="java.lang.String"/>
+	<parameter name="flightNo" class="java.lang.String"/>
+	<parameter name="departureDate" class="java.lang.String"/>
+	<parameter name="departureTime" class="java.lang.String"/>
+	<parameter name="GuideName" class="java.lang.String"/>
+	<parameter name="GuideContactNo" class="java.lang.String"/>
+	<parameter name="GuideVehicle" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select * from tourdetail natural join tour where tourID=$P{tourID};]]>
+	</queryString>
+	<field name="tourID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="tourID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tourdetail"/>
+	</field>
+	<field name="visitDate" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.label" value="visitDate"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tourdetail"/>
+	</field>
+	<field name="visitPlace" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="visitPlace"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tourdetail"/>
+	</field>
+	<field name="nights" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="nights"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tourdetail"/>
+	</field>
+	<field name="stayHotel" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="stayHotel"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tourdetail"/>
+	</field>
+	<field name="gstID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="gstID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tour"/>
+	</field>
+	<field name="gidID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="gidID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tour"/>
+	</field>
+	<field name="startDate" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.label" value="startDate"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tour"/>
+	</field>
+	<field name="endDate" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.label" value="endDate"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tour"/>
+	</field>
+	<field name="pickupOn" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="pickupOn"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tour"/>
+	</field>
+	<field name="dropOn" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="dropOn"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tour"/>
+	</field>
+	<field name="adults" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="adults"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tour"/>
+	</field>
+	<field name="children" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="children"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tour"/>
+	</field>
+	<field name="rooms" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="rooms"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tour"/>
+	</field>
+	<field name="roomType" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="roomType"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tour"/>
+	</field>
+	<field name="mealType" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="mealType"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tour"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="87" splitType="Stretch">
+			<staticText>
+				<reportElement x="66" y="16" width="309" height="44" forecolor="#000DFF" uuid="673278a5-5b6c-44fa-9f71-bd9f70f2e884"/>
+				<textElement textAlignment="Left">
+					<font size="32"/>
+				</textElement>
+				<text><![CDATA[Pankaja Travels]]></text>
+			</staticText>
+			<image scaleImage="FillFrame">
+				<reportElement x="4" y="6" width="56" height="74" uuid="ceed2b96-5865-4884-9e19-bfd3c66f3d1a"/>
+				<imageExpression><![CDATA["D:\\Ronila\\ijse-cmjd49\\ProjectTour\\ProjectTour\\src\\lk\\pankajatravel\\img\\tour5.jpg"]]></imageExpression>
+			</image>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="480" y="0" width="75" height="16" uuid="53b6eaac-4aaf-408f-9636-57775760e72f"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm">
+				<reportElement x="498" y="20" width="57" height="20" uuid="e164e77c-7458-461d-9d18-c43495dcee10"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="209" splitType="Stretch">
+			<frame>
+				<reportElement mode="Transparent" x="0" y="3" width="550" height="197" backcolor="#FFFFFF" uuid="6259efa3-74b3-484e-ae55-9468b85fdf6f"/>
+				<box padding="1">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<staticText>
+					<reportElement x="11" y="11" width="532" height="30" uuid="f1c357ea-5be2-4d8e-87ae-2f9ebf66e4c0"/>
+					<textElement>
+						<font size="18"/>
+					</textElement>
+					<text><![CDATA[Confirmmation Voucher by Pankaja Travels PVT LTD-Sri Lanka]]></text>
+				</staticText>
+				<line>
+					<reportElement x="0" y="51" width="548" height="1" uuid="e7b115ea-3257-4f85-bc17-1c06278fa0bf"/>
+				</line>
+				<line>
+					<reportElement x="181" y="51" width="1" height="145" uuid="4daff1c3-e435-476c-bc75-2544262ddf7c"/>
+				</line>
+				<line>
+					<reportElement x="0" y="109" width="548" height="1" uuid="9c6c5e7c-b3f2-4d5e-9555-2b7cf189ae05"/>
+				</line>
+				<staticText>
+					<reportElement x="20" y="66" width="146" height="30" uuid="97c56e87-e485-4daa-a578-54862b3ba171"/>
+					<textElement verticalAlignment="Middle">
+						<font size="13" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Passenger Name]]></text>
+				</staticText>
+				<line>
+					<reportElement x="-1" y="149" width="549" height="1" uuid="92e6b73b-5c1d-4865-a5d7-bc61379d0b43"/>
+				</line>
+				<line>
+					<reportElement x="426" y="51" width="1" height="57" uuid="afed54fd-6350-4725-9b23-ece70090dcfa"/>
+				</line>
+				<line>
+					<reportElement x="501" y="52" width="1" height="57" uuid="1409eba9-cf81-4bdf-81e5-5987f2cc3ca7"/>
+				</line>
+				<line>
+					<reportElement x="426" y="81" width="122" height="1" uuid="b2263d92-1d59-4201-ad68-843b9aa03030"/>
+				</line>
+				<staticText>
+					<reportElement x="429" y="56" width="60" height="20" uuid="c1647a10-2850-4268-a2a2-4b32b86ad604"/>
+					<textElement textAlignment="Center">
+						<font size="14"/>
+					</textElement>
+					<text><![CDATA[Adults]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="431" y="85" width="58" height="20" uuid="699deec9-4351-4c9e-a546-ac36b4b63e96"/>
+					<textElement textAlignment="Center">
+						<font size="14"/>
+					</textElement>
+					<text><![CDATA[Childs]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="19" y="116" width="146" height="30" uuid="e289d66b-65cd-4400-bbb4-554707d34ae3"/>
+					<textElement>
+						<font size="16" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Hotel Confirmation]]></text>
+				</staticText>
+				<line>
+					<reportElement x="279" y="110" width="1" height="85" uuid="6efa7860-0784-4672-9bdb-b96a7bcb9761"/>
+				</line>
+				<line>
+					<reportElement x="426" y="110" width="1" height="85" uuid="0f8fef3a-3937-4ad3-8eb8-53a325a1a25b"/>
+				</line>
+				<staticText>
+					<reportElement x="182" y="117" width="97" height="25" uuid="5e531109-7e17-42a6-a808-e77202c57550"/>
+					<textElement textAlignment="Center">
+						<font size="14" isBold="true"/>
+					</textElement>
+					<text><![CDATA[No. of Rooms]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="438" y="118" width="100" height="21" uuid="d8ad9a9d-c6c5-4c4b-9411-56be5c6bdf8d"/>
+					<textElement textAlignment="Center">
+						<font size="14" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Meals]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="302" y="118" width="100" height="21" uuid="1879ba03-92eb-4340-8f42-ae3d2a1ed9a0"/>
+					<textElement textAlignment="Center">
+						<font size="14" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Room Type]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="193" y="161" width="70" height="18" uuid="09595dd1-c49b-4f76-8b8b-9dce54c8e021"/>
+					<textElement textAlignment="Center">
+						<font size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{rooms}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="436" y="157" width="100" height="30" uuid="4bc45f15-30df-4205-8593-80e2b3e14155"/>
+					<textElement textAlignment="Center">
+						<font size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{mealType}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="282" y="157" width="140" height="32" uuid="e2229a04-e593-400f-a95d-d700a6bf32fd"/>
+					<textElement textAlignment="Center">
+						<font size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{roomType}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="508" y="56" width="35" height="20" uuid="2f92e66c-c6bc-4154-967d-25f223e45e72"/>
+					<textElement textAlignment="Center"/>
+					<textFieldExpression><![CDATA[$F{adults}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="508" y="85" width="34" height="21" uuid="66e19f2d-9e94-4f40-aa30-37f4993f6ecd"/>
+					<textElement textAlignment="Center"/>
+					<textFieldExpression><![CDATA[$F{children}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="219" y="68" width="192" height="30" uuid="84ff77fb-f77f-4901-9f76-7eacf8d6f634"/>
+					<textElement verticalAlignment="Middle">
+						<font size="16" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{gstName}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="191" y="68" width="28" height="30" uuid="707732dd-b61d-49d1-80b3-7aaa10a8341b"/>
+					<textElement verticalAlignment="Middle">
+						<font size="16" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Mr]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="284" splitType="Stretch">
+			<staticText>
+				<reportElement x="1" y="251" width="100" height="30" uuid="d53d5738-b7fe-418e-9967-91a2ce4777fe"/>
+				<textElement textAlignment="Center">
+					<font size="19" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="132" y="251" width="120" height="30" uuid="36a36a9a-2d69-4e9c-a26e-b36406a57d38"/>
+				<textElement textAlignment="Center">
+					<font size="19" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Destination]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="251" width="100" height="30" uuid="36fa1ec3-cad2-4ba9-bbf9-916c1fc90c78"/>
+				<textElement textAlignment="Center">
+					<font size="19" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Hotels]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="422" y="251" width="130" height="30" uuid="1abd997c-6a2e-41e5-93a0-8ad388816bfb"/>
+				<textElement textAlignment="Center">
+					<font size="19" isBold="true"/>
+				</textElement>
+				<text><![CDATA[No. of Nights]]></text>
+			</staticText>
+			<frame>
+				<reportElement x="1" y="9" width="549" height="110" uuid="cc4146bb-c1cf-4e9b-a920-d8fd714b7b28"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<line>
+					<reportElement x="0" y="30" width="548" height="1" uuid="a723b295-a410-4ee6-bdcf-a086c3354a6e"/>
+				</line>
+				<line>
+					<reportElement x="279" y="0" width="1" height="110" uuid="34d05ae0-dc8c-49fc-8c5f-03093e1eb9e1"/>
+				</line>
+				<staticText>
+					<reportElement x="11" y="0" width="81" height="30" uuid="39e20d88-ee89-4282-988c-09912fd7f09a"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="16" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Arrival]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="291" y="1" width="88" height="30" uuid="b62111f5-5440-4288-b44b-983d78312ce9"/>
+					<textElement verticalAlignment="Middle">
+						<font size="16" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Departure]]></text>
+				</staticText>
+				<line>
+					<reportElement x="0" y="80" width="549" height="1" uuid="0cefd25d-4c51-404c-97aa-5b9284f26d74"/>
+				</line>
+				<staticText>
+					<reportElement x="13" y="86" width="80" height="20" uuid="4894c218-45c6-4132-a2ee-753ac5ea94a4"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<text><![CDATA[Arrival time:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="292" y="86" width="103" height="20" uuid="d63809b4-cc8e-4c7b-b950-4d4279115789"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<text><![CDATA[Departure time:]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="95" y="31" width="100" height="19" uuid="bd33a87e-e856-445f-81e0-3ff456fa20e2"/>
+					<textElement verticalAlignment="Middle">
+						<font size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{arriveDate}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="13" y="52" width="257" height="28" uuid="9249ba41-9e49-414f-a4b8-529375529b6b"/>
+					<textElement verticalAlignment="Middle">
+						<font size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{arriveAirport}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="389" y="32" width="100" height="18" uuid="580df536-7413-4f55-9c25-76646b6709ce"/>
+					<textElement verticalAlignment="Middle">
+						<font size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{departureDate}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="292" y="52" width="244" height="28" uuid="6769b050-cd5f-4ad1-bc1f-238c28fc8052"/>
+					<textElement verticalAlignment="Middle">
+						<font size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{arriveAirport}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="95" y="83" width="88" height="24" uuid="a28b9216-b030-480b-ab13-397da96d18f5"/>
+					<textElement verticalAlignment="Middle">
+						<font size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{arriveTime}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="151" y="3" width="129" height="25" uuid="964a2d32-2537-459e-ae6f-4c62a8ef6d05"/>
+					<textElement verticalAlignment="Middle">
+						<font size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{flightNo}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="397" y="83" width="100" height="24" uuid="b53799a8-6495-4ddb-98cd-98d52477793c"/>
+					<textElement verticalAlignment="Middle">
+						<font size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{departureTime}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="94" y="2" width="57" height="27" uuid="5215c7f3-867f-401f-92da-97d385eff662"/>
+					<textElement verticalAlignment="Middle">
+						<font size="12"/>
+					</textElement>
+					<text><![CDATA[Flight No :]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="390" y="3" width="57" height="27" uuid="b6ea8244-f1dd-4341-b5b3-6d2edd85ed9b"/>
+					<textElement verticalAlignment="Middle">
+						<font size="12"/>
+					</textElement>
+					<text><![CDATA[Flight No :]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="14" y="31" width="78" height="20" uuid="f68e8430-96e7-41e5-ac67-948230100f4f"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<text><![CDATA[Arrive date]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="293" y="33" width="96" height="20" uuid="31c747b1-1b7d-4707-868c-978915bf2e99"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<text><![CDATA[Departure date]]></text>
+				</staticText>
+			</frame>
+			<staticText>
+				<reportElement x="6" y="131" width="176" height="30" uuid="739c096b-826e-4789-8f8b-03662e6adc27"/>
+				<textElement>
+					<font size="19" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tour Details]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="9" y="171" width="76" height="30" uuid="2b259b34-3d06-4203-8572-9989cbb03111"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Start Date :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="97" y="170" width="100" height="30" uuid="779e514f-3590-4043-b54c-f5a971343f46"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{startDate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="10" y="211" width="75" height="30" uuid="e41b9194-8de0-4e62-8a8d-677218a89e8f"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Pickup On :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="97" y="209" width="100" height="30" uuid="2772850a-0731-4199-8564-c0b31cacda9c"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pickupOn}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="285" y="172" width="70" height="30" uuid="cc274a50-46a8-4192-99be-6c8020764b43"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[End Date :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="369" y="172" width="100" height="30" uuid="b932b90a-8e95-4473-beb9-76571ead0f8f"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{endDate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="285" y="211" width="70" height="30" uuid="63c85b14-9b96-4057-a565-9846096015d1"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Drop On :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="369" y="210" width="100" height="30" uuid="15d6817d-240b-4229-95b6-6ddcb31b62b3"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dropOn}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="35" splitType="Stretch">
+			<textField>
+				<reportElement x="2" y="2" width="100" height="30" uuid="ca270227-fcd7-4691-80cb-596e6f470f4d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7c751761-3b99-42e5-92a8-f4138767fad0"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{visitDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="132" y="1" width="120" height="30" uuid="637e8c4b-16ae-45d8-a431-2e0d08225637">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="70538f5c-0491-43a7-95e3-cdc024718665"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{visitPlace}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="1" width="100" height="30" uuid="31cb8bc6-d5a3-42a4-9e7d-ec8b66e19d92">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1d3b704b-b708-4589-b845-0802c4e0e4fc"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{stayHotel}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="423" y="2" width="129" height="28" uuid="78cc69bf-303e-4de2-8b28-a38d8f9e44fe">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6fddb142-9ea1-42a4-b2bf-e5d964cd6272"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nights}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="304">
+			<staticText>
+				<reportElement x="5" y="265" width="551" height="30" uuid="66bf32fc-fcc9-4754-b950-7ebe78b6f144"/>
+				<textElement textAlignment="Center">
+					<font size="19"/>
+				</textElement>
+				<text><![CDATA[Emergancy Contact Details : Pankaja Travels(+9477xxxxxxx)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="122" width="140" height="30" uuid="efeb4b05-c803-4909-b964-bcdb1f14e892"/>
+				<textElement>
+					<font fontName="Bodoni MT" size="19" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Inclusions]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="25" y="148" width="167" height="24" uuid="b0e2ef7b-7fb8-446d-b95e-a2729a2ddd1b"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Airport pick up & drop off]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="25" y="172" width="350" height="20" uuid="da7aaee8-1e3c-4bdc-a6a9-d4e0c82be184"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Private Luxury Vehicle with an English Speaking guide throught the Journey]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="25" y="192" width="167" height="20" uuid="496d2e80-8c2f-4e0a-a944-49fef129bddd"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Free Sim cards]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="25" y="212" width="167" height="20" uuid="40229221-4599-4e07-a2e2-28f3f4facfe5"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[All hotel transfers]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="25" y="232" width="167" height="20" uuid="88f84e45-707a-484f-996f-a2df27dfdc17"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[All government taxes]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="7" y="8" width="150" height="30" uuid="18d3190c-211c-4d97-91bf-940f2083a209"/>
+				<textElement>
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Guide Details]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="17" y="38" width="100" height="23" uuid="0b70b61e-9334-431e-8190-a23f6bd52ff1"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Name            -]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="117" y="38" width="28" height="23" uuid="78365fb5-b4d6-4507-a38c-62e8a1fb71db"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Mr]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="17" y="65" width="100" height="20" uuid="b0328296-c5ca-497b-ac22-b66fa3f2262d"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Contact         -]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="17" y="87" width="100" height="25" uuid="2b717699-a028-4779-b168-6daf5ff5e203"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Vehicle type  -]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="145" y="38" width="100" height="23" uuid="bf536853-dc0b-40ea-816e-443199270780"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{GuideName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="118" y="65" width="162" height="22" uuid="4af0ad7d-7264-413f-8a00-397c6122d164"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{GuideContactNo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="118" y="90" width="162" height="22" uuid="4dfd0afa-33e9-44eb-8914-c9fd2f03b93c"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{GuideVehicle}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

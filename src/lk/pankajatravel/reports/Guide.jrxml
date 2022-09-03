@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Guide" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c89fcb3d-a979-495b-9617-314bdf55aa37">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="projecttourDatabaseConnection"/>
+	<parameter name="guideID" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[select * from guide where gidID=$P{guideID};]]>
+	</queryString>
+	<field name="gidID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="gidID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="guide"/>
+	</field>
+	<field name="fName" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="fName"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="guide"/>
+	</field>
+	<field name="lName" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="lName"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="guide"/>
+	</field>
+	<field name="NIC" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="NIC"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="guide"/>
+	</field>
+	<field name="address" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="address"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="guide"/>
+	</field>
+	<field name="YOE" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="YOE"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="guide"/>
+	</field>
+	<field name="mobileNo" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="mobileNo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="guide"/>
+	</field>
+	<field name="email" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="email"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="guide"/>
+	</field>
+	<field name="vehicle" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="vehicle"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="guide"/>
+	</field>
+	<field name="guideLicence" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="guideLicence"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="guide"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="82" splitType="Stretch">
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="470" y="0" width="84" height="20" uuid="e5a844eb-1172-4658-b5a5-923df60540f9"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm">
+				<reportElement x="484" y="20" width="70" height="20" uuid="fb3ed918-48d9-435c-89cb-e0fec8473482"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<image scaleImage="FillFrame">
+				<reportElement x="4" y="6" width="56" height="74" uuid="92213b9a-3215-470c-babd-0c6c22475ff8"/>
+				<imageExpression><![CDATA["D:\\Ronila\\ijse-cmjd49\\ProjectTour\\ProjectTour\\src\\lk\\pankajatravel\\img\\tour5.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="66" y="16" width="309" height="44" forecolor="#000DFF" uuid="d28321ce-0716-4959-bfeb-3850ed7dac6e"/>
+				<textElement textAlignment="Left">
+					<font size="32"/>
+				</textElement>
+				<text><![CDATA[Pankaja Travels]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="50">
+			<staticText>
+				<reportElement x="120" y="4" width="300" height="42" forecolor="#030303" uuid="b97a6115-c70c-4476-8920-7f2e345d95f2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="25" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Guide Report]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="360" splitType="Stretch">
+			<textField>
+				<reportElement x="298" y="28" width="52" height="30" uuid="87e79f0f-e008-4934-a138-8df244ee41cc">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="dd22eb2b-722c-40a4-b290-f6e552cc8389"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="351" y="28" width="55" height="30" uuid="fdf69124-4028-4069-b2ce-c53d9b834e9b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="16209aae-c029-41fc-ac2b-8bd640a7c641"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{lName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="275" y="68" width="205" height="30" uuid="cfca1a25-d406-4638-be39-d86e780811ce">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1fe41cd9-8b22-4bfb-b554-3842a55f1429"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NIC}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="275" y="108" width="205" height="30" uuid="f89bbb98-3c7a-4068-a3ec-cb38b8882b09">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6f583395-331d-4344-9c1b-39939d89c36c"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="275" y="148" width="25" height="30" uuid="f6a08a81-72d2-488c-ac72-8eff83166422">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b9725667-5cad-495b-bc97-4aca8a69b899"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{YOE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="275" y="187" width="205" height="30" uuid="a04a4e99-cece-4fa5-8c30-a6724e4e4fc4">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="217ac8c8-624e-44e9-b5fd-07d2b426fa99"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mobileNo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="275" y="228" width="235" height="30" uuid="f036e27a-0c10-4f4b-b95f-3aafc8170648">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="408879b9-c3bc-45fc-9357-1127cd38b196"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="275" y="268" width="235" height="30" uuid="211e649f-a86e-464d-9665-2bc8de688801">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5993463a-78b5-4ed9-af16-e26630d6a9fd"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{vehicle}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="275" y="308" width="173" height="30" uuid="817628ed-ea35-45c1-9fff-b633dbad568f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3491067d-dbfd-447d-8489-997c19fdb5d3"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{guideLicence}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="110" y="28" width="135" height="30" uuid="c9659a5b-410a-4b77-a42e-e5fd586da40f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="dd22eb2b-722c-40a4-b290-f6e552cc8389"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Full Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="110" y="68" width="135" height="30" uuid="d3d96abf-9fad-4e5b-8ef9-e580d0a74200">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1fe41cd9-8b22-4bfb-b554-3842a55f1429"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NIC Number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="110" y="108" width="135" height="30" uuid="6b174fd1-2661-48ec-9939-33c4550de7e4">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6f583395-331d-4344-9c1b-39939d89c36c"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Address]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="110" y="148" width="135" height="30" uuid="77fe1af9-087e-4b5d-86be-529201ae11c8">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b9725667-5cad-495b-bc97-4aca8a69b899"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Year of Experience]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="110" y="188" width="135" height="30" uuid="9ccb8433-1f8b-4684-8894-69ec4b1c4c7d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="217ac8c8-624e-44e9-b5fd-07d2b426fa99"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Mobile Number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="110" y="228" width="135" height="30" uuid="3d5793aa-0aeb-4021-90c6-45d96323bad9">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="408879b9-c3bc-45fc-9357-1127cd38b196"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Email Address]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="110" y="268" width="135" height="30" uuid="1c00dcd5-a93b-45e6-9c6f-0b691b35e5b1">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5993463a-78b5-4ed9-af16-e26630d6a9fd"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Vehicle]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="110" y="308" width="135" height="30" uuid="bea26fd4-9838-449b-ba2c-8b87155d8694">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3491067d-dbfd-447d-8489-997c19fdb5d3"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Guide Licence]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="275" y="28" width="20" height="30" uuid="e1117c6e-d2cb-4a09-9892-307adbd114b5"/>
+				<textElement verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Mr]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="303" y="148" width="64" height="30" uuid="11cb5a13-cf81-4409-aa44-9e9916f7f905"/>
+				<textElement verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Years]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="45">
+			<staticText>
+				<reportElement x="2" y="10" width="551" height="30" uuid="0fb1b1d4-1e72-4fa6-8b09-b7e73717e800"/>
+				<textElement textAlignment="Center">
+					<font size="19"/>
+				</textElement>
+				<text><![CDATA[Emergancy Contact Details : Pankaja Travels(+94777944802)]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

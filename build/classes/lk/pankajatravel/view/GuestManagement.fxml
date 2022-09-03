@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="paneGuestManagement" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="615.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.pankajatravel.controller.GuestManagementController">
+   <children>
+      <HBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane prefHeight="600.0" prefWidth="300.0">
+               <children>
+                  <ImageView fitHeight="384.0" fitWidth="300.0" layoutY="108.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../img/images.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane prefHeight="600.0" prefWidth="500.0" style="-fx-border-color: black; -fx-border-width: 0px 0px 0px 1px;">
+               <children>
+                  <Pane layoutX="33.0" layoutY="32.0" prefHeight="254.0" prefWidth="432.0" style="-fx-border-color: black;">
+                     <children>
+                        <Label layoutX="24.0" text="Guest Details" underline="true">
+                           <font>
+                              <Font name="System Bold" size="36.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="24.0" layoutY="75.0" text="Current Guests">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Label>
+                        <Label layoutX="24.0" layoutY="108.0" text="Current Tours">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Label>
+                        <Label layoutX="24.0" layoutY="141.0" text="Feedback">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Label>
+                        <Label layoutX="135.0" layoutY="75.0" prefHeight="17.0" prefWidth="126.0" text="10" />
+                        <Label layoutX="135.0" layoutY="108.0" prefHeight="17.0" prefWidth="126.0" text="2" />
+                        <Label layoutX="135.0" layoutY="141.0" text="Good" />
+                        <Label layoutX="261.0" layoutY="141.0" text="Bad" />
+                        <Label layoutX="184.0" layoutY="141.0" prefHeight="17.0" prefWidth="65.0" text="5" />
+                        <Label layoutX="302.0" layoutY="141.0" prefHeight="17.0" prefWidth="65.0" text="0" />
+                     </children>
+                  </Pane>
+                  <JFXButton fx:id="btnNewGuest" buttonType="RAISED" layoutX="58.0" layoutY="347.0" onMouseClicked="#btnNewGuestMouseClicked" prefHeight="43.0" prefWidth="152.0" style="-fx-background-color: #dadada;" text="New Guest" wrapText="true">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="250.0" layoutY="347.0" onMouseClicked="#btnSearchGuestMouseClicked" prefHeight="43.0" prefWidth="152.0" style="-fx-background-color: #dadada;" text="Search Guest" wrapText="true">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="58.0" layoutY="419.0" onMouseClicked="#btnUpdateRemoveGuestMouseClicked" prefHeight="43.0" prefWidth="152.0" style="-fx-background-color: #dadada;" text="Update/Remove Guest" textAlignment="CENTER" wrapText="true">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="250.0" layoutY="419.0" onMouseClicked="#btnViewAllMouseClicked" prefHeight="43.0" prefWidth="152.0" style="-fx-background-color: #dadada;" text="View All" wrapText="true">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></JFXButton>
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

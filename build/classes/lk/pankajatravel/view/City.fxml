@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="615.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.pankajatravel.controller.CityController">
+   <children>
+      <HBox prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="615.0" prefWidth="300.0">
+               <children>
+                  <ImageView fitHeight="624.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/Smart-City-PICTURE%20edit.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane prefHeight="607.0" prefWidth="502.0" style="-fx-border-width: 0px 0px 0px 1px; -fx-border-color: black;">
+               <children>
+                  <Pane layoutX="14.0" layoutY="41.0" prefHeight="250.0" prefWidth="310.0">
+                     <children>
+                        <VBox prefHeight="250.0" prefWidth="310.0">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <children>
+                              <JFXTextField fx:id="txtPlaceID" labelFloat="true" onAction="#txtPlaceIDAction" promptText="Place ID">
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" left="10.0" right="10.0" top="20.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXTextField fx:id="txtName" labelFloat="true" layoutX="20.0" layoutY="30.0" onAction="#txtNameAction" promptText="Name">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </JFXTextField>
+                              <JFXTextField fx:id="txtLocation" labelFloat="true" layoutX="20.0" layoutY="152.0" onAction="#txtLocationAction" promptText="Location">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </JFXTextField>
+                              <JFXTextField fx:id="txtDistanceFromColombo" labelFloat="true" layoutX="10.0" layoutY="71.0" onAction="#txtDistanceFromColomboAction" promptText="Distance From Colombo (Km)">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </JFXTextField>
+                           </children>
+                        </VBox>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="324.0" layoutY="74.0" prefHeight="218.0" prefWidth="177.0">
+                     <children>
+                        <VBox alignment="TOP_CENTER" prefHeight="218.0" prefWidth="177.0">
+                           <children>
+                              <JFXButton fx:id="btnAddPlace" onAction="#btnAddPlaceAction" prefHeight="26.0" prefWidth="100.0" style="-fx-background-color: #dadada;" text="Add Place">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXButton>
+                              <JFXButton fx:id="btnUpdate" layoutX="72.0" layoutY="30.0" onMouseClicked="#btnUpdateMouseClicked" prefHeight="26.0" prefWidth="100.0" style="-fx-background-color: #dadada;" text="Update">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXButton>
+                              <JFXButton fx:id="btnRemove" layoutX="72.0" layoutY="76.0" onMouseClicked="#btnRemoveMouseClicked" prefHeight="26.0" prefWidth="100.0" style="-fx-background-color: #dadada;" text="Remove">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXButton>
+                              <JFXButton layoutX="72.0" layoutY="127.0" onMouseClicked="#btnMoreDetailsMouseClicked" prefHeight="26.0" prefWidth="100.0" style="-fx-background-color: #dadada;" text="More Details">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXButton>
+                           </children>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </VBox>
+                     </children></Pane>
+                  <TableView fx:id="tblPlace" layoutX="27.0" layoutY="364.0" onMouseClicked="#tblPlaceMouseClicked" prefHeight="226.0" prefWidth="447.0" tableMenuButtonVisible="true">
+                    <columns>
+                      <TableColumn prefWidth="83.199951171875" text="Place ID" />
+                      <TableColumn prefWidth="92.800048828125" text="Name" />
+                        <TableColumn prefWidth="100.80001831054688" text="Location" />
+                        <TableColumn prefWidth="151.20001220703125" text="Distance to Colombo" />
+                    </columns>
+                  </TableView>
+                  <Label layoutX="64.0" layoutY="308.0" prefHeight="36.0" prefWidth="246.0" text="Place Details">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIcon iconName="MAP_MARKER" layoutX="26.0" layoutY="347.0" size="36px" />
+                  <JFXToggleButton fx:id="tBtnEdit" contentDisplay="RIGHT" layoutX="401.0" onAction="#tBtnEditAction" text="Edit">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </JFXToggleButton>
+                  <Separator layoutX="335.0" layoutY="55.0" orientation="VERTICAL" prefHeight="243.0" prefWidth="0.0" />
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="615.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox prefHeight="100.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane prefHeight="600.0" prefWidth="300.0" style="-fx-background-color: gray;" />
+            <Pane prefHeight="600.0" prefWidth="500.0" style="-fx-background-color: #A5CFF0;">
+               <children>
+                  <Pane layoutX="14.0" layoutY="41.0" prefHeight="492.0" prefWidth="262.0">
+                     <children>
+                        <VBox alignment="TOP_CENTER" prefHeight="492.0" prefWidth="262.0">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <children>
+                              <JFXTextField focusColor="#61a5ff" labelFloat="true" promptText="text">
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" left="10.0" right="10.0" top="20.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXTextField labelFloat="true" layoutX="20.0" layoutY="30.0" promptText="text">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </JFXTextField>
+                              <JFXTextField labelFloat="true" layoutX="10.0" layoutY="71.0" promptText="text">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </JFXTextField>
+                              <JFXTextField labelFloat="true" layoutX="10.0" layoutY="101.0" promptText="text">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </JFXTextField>
+                              <JFXTextField labelFloat="true" layoutX="10.0" layoutY="132.0" promptText="text">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </JFXTextField>
+                              <JFXTextField labelFloat="true" layoutX="10.0" layoutY="192.0" promptText="text">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </JFXTextField>
+                           </children>
+                        </VBox>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="309.0" layoutY="125.0" prefHeight="272.0" prefWidth="177.0">
+                     <children>
+                        <VBox alignment="TOP_CENTER" prefHeight="272.0" prefWidth="177.0">
+                           <children>
+                              <JFXButton style="-fx-background-color: white;">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
+                                 </VBox.margin>
+                              </JFXButton>
+                              <JFXButton layoutX="72.0" layoutY="30.0" style="-fx-background-color: white;">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </JFXButton>
+                              <JFXButton layoutX="72.0" layoutY="76.0" style="-fx-background-color: white;">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </JFXButton>
+                              <JFXButton layoutX="72.0" layoutY="101.0" style="-fx-background-color: white;">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </JFXButton>
+                              <JFXButton layoutX="72.0" layoutY="127.0" style="-fx-background-color: white;">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </JFXButton>
+                           </children>
+                           <effect>
+                              <DropShadow />
+                           </effect></VBox>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+      <AnchorPane id="AnchorPane" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="615.0" prefWidth="800.0" visible="false">
+         <children>
+            <Pane layoutX="10.0" layoutY="10.0" prefHeight="80.0" prefWidth="800.0" style="-fx-background-color: #154FAF;" AnchorPane.bottomAnchor="535.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label fx:id="lblHeading" layoutX="220.0" layoutY="20.0" text="Guide Management" textFill="WHITE">
+                     <font>
+                        <Font name="Copperplate Gothic Bold" size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Label layoutX="109.0" layoutY="110.0" text="Search By Guide ID">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtSearchGuideID" layoutX="109.0" layoutY="128.0" onAction="#txtSearchGuideIDAction" prefHeight="26.0" prefWidth="254.0" />
+            <Label layoutX="439.0" layoutY="110.0" text="Search By Guide Name">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtSearchGuideName" layoutX="439.0" layoutY="128.0" onAction="#txtSearchGuideNameAction" prefHeight="26.0" prefWidth="254.0" />
+            <JFXToggleButton fx:id="tBtnEdit" contentDisplay="BOTTOM" layoutX="707.0" layoutY="88.0" onMouseClicked="#tBtnEditMouseClicked" prefHeight="80.0" prefWidth="78.0" text="Edit" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXToggleButton>
+            <Separator layoutX="1.0" layoutY="171.0" prefHeight="0.0" prefWidth="800.0" />
+            <Pane layoutY="170.0" prefHeight="445.0" prefWidth="800.0" />
+            <JFXTextField fx:id="txtGidID" labelFloat="true" layoutX="112.0" layoutY="200.0" prefHeight="26.0" prefWidth="253.0" promptText="Guide ID">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtFName" labelFloat="true" layoutX="112.0" layoutY="265.0" prefHeight="26.0" prefWidth="254.0" promptText="First Name">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtMobileNo" labelFloat="true" layoutX="442.0" layoutY="395.0" prefHeight="26.0" prefWidth="254.0" promptText="Mobile Number" text="(+94)">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtAddress" labelFloat="true" layoutX="442.0" layoutY="330.0" prefHeight="26.0" prefWidth="254.0" promptText="Address">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtLName" labelFloat="true" layoutX="442.0" layoutY="265.0" prefHeight="26.0" prefWidth="254.0" promptText="Last Name">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtNICNumber" labelFloat="true" layoutX="112.0" layoutY="330.0" prefHeight="26.0" prefWidth="254.0" promptText="NIC Number">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtYearofExp" labelFloat="true" layoutX="112.0" layoutY="395.0" prefHeight="26.0" prefWidth="254.0" promptText="Years of Experience">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton fx:id="btnUpdate" buttonType="RAISED" layoutX="439.0" layoutY="563.0" onMouseClicked="#btnUpdateMouseClicked" prefHeight="26.0" prefWidth="148.0" style="-fx-background-color: #DADADA;" text="Update Guide" wrapText="true" />
+            <JFXButton fx:id="btnRemove" buttonType="RAISED" layoutX="221.0" layoutY="563.0" onMouseClicked="#btnRemoveMouseClicked" prefHeight="26.0" prefWidth="148.0" style="-fx-background-color: #DADADA;" text="Remove Guide" wrapText="true" />
+            <JFXTextField fx:id="txtEmailAddress" labelFloat="true" layoutX="111.0" layoutY="460.0" prefHeight="26.0" prefWidth="254.0" promptText="Email Address">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtVehicle" labelFloat="true" layoutX="442.0" layoutY="460.0" prefHeight="26.0" prefWidth="254.0" promptText="Vehicle">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXRadioButton fx:id="rBtnYes" layoutX="265.0" layoutY="531.0" text="Yes" />
+            <JFXRadioButton fx:id="rBtnNo" layoutX="343.0" layoutY="531.0" text="No" />
+            <Label layoutX="109.0" layoutY="530.0" prefHeight="17.0" prefWidth="156.0" text="Guide Licence" textFill="#4d4d4d">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1024.0" visible="false">
+         <children>
+            <TableView layoutX="35.0" layoutY="97.0" prefHeight="592.0" prefWidth="951.0">
+               <columns>
+                  <TableColumn prefWidth="104.79998016357422" text="Hotel ID" />
+                  <TableColumn minWidth="0.0" prefWidth="172.00003051757812" text="Name" />
+                  <TableColumn minWidth="0.0" prefWidth="204.00003051757812" text="Address" />
+                  <TableColumn prefWidth="173.5999755859375" text="Tel No" />
+                  <TableColumn prefWidth="161.60003662109375" text="Email Address" />
+                  <TableColumn minWidth="0.0" prefWidth="131.199951171875" text="Accommodation" />
+               </columns>
+            </TableView>
+            <Label layoutX="84.0" layoutY="22.0" prefHeight="36.0" prefWidth="246.0" text="Hotel Details">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <FontAwesomeIcon iconName="UNIVERSITY" layoutX="35.0" layoutY="62.0" size="36px" />
+         </children>
+      </AnchorPane>
+      <AnchorPane id="AnchorPane" prefHeight="615.0" prefWidth="800.0">
+         <children>
+            <Pane layoutX="20.0" layoutY="20.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="800.0" style="-fx-background-color: #154FAF;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label fx:id="lblHeading1" layoutX="220.0" layoutY="20.0" text="Hotel Management" textFill="WHITE">
+                     <font>
+                        <Font name="Copperplate Gothic Bold" size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Label layoutX="106.0" layoutY="120.0" text="Search By Hotel ID">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtSearchHtlID" layoutX="106.0" layoutY="138.0" onAction="#txtSearchHtlIDAction" prefHeight="26.0" prefWidth="254.0" />
+            <Label layoutX="444.0" layoutY="120.0" text="Search By Hotel Name">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtSearchHtlName" layoutX="444.0" layoutY="138.0" onAction="#txtSearchHtlNameAction" prefHeight="26.0" prefWidth="254.0" />
+            <JFXToggleButton fx:id="tgBtnEdit" contentDisplay="BOTTOM" layoutX="715.0" layoutY="95.0" onMouseClicked="#tgBtnEditMouseClicked" text="Edit">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXToggleButton>
+            <Separator layoutY="186.0" prefHeight="3.0" prefWidth="800.0" />
+            <JFXTextField fx:id="txtHotelID" labelFloat="true" layoutX="106.0" layoutY="220.0" onAction="#txtHotelIDAction" prefHeight="30.0" prefWidth="254.0" promptText="Hotel ID">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtName" labelFloat="true" layoutX="106.0" layoutY="280.0" onAction="#txtNameAction" prefHeight="30.0" prefWidth="254.0" promptText="Name">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtAddress1" labelFloat="true" layoutX="444.0" layoutY="280.0" onAction="#txtAddressAction" prefHeight="30.0" prefWidth="254.0" promptText="Address">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtTelNo" labelFloat="true" layoutX="105.0" layoutY="340.0" onAction="#txtTelNoAction" prefHeight="30.0" prefWidth="254.0" promptText="Telephone Number" text="+94">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtEmailAddress1" labelFloat="true" layoutX="444.0" layoutY="340.0" onAction="#txtEmailAddressAction" prefWidth="254.0" promptText="Email Address">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <HBox alignment="CENTER_LEFT" layoutX="105.0" layoutY="400.0" prefHeight="40.0" prefWidth="303.0">
+               <children>
+                  <Label prefHeight="20.0" prefWidth="122.0" text="Accommodation">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <JFXRadioButton fx:id="rBtnYes1" onAction="#rBtnYesAction" prefHeight="18.0" prefWidth="41.0" text="Yes">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </JFXRadioButton>
+                  <JFXRadioButton fx:id="rBtnNo1" layoutX="130.0" layoutY="23.0" onAction="#rBtnNoAction" prefHeight="18.0" prefWidth="41.0" text="No" />
+               </children>
+            </HBox>
+            <JFXButton buttonType="RAISED" layoutX="444.0" layoutY="525.0" onMouseClicked="#btnUpdateMouseClicked" prefHeight="26.0" prefWidth="148.0" style="-fx-background-color: #DADADA;" text="Update Hotel" wrapText="true" />
+            <JFXButton buttonType="RAISED" layoutX="212.0" layoutY="525.0" onMouseClicked="#btnRemoveMouseClicked" prefHeight="26.0" prefWidth="148.0" style="-fx-background-color: #DADADA;" text="Remove Hotel" wrapText="true" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

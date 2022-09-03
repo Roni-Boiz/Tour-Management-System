@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1024.0" style="-fx-background-color: transparent;" stylesheets="@../styles/home.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.pankajatravel.controller.HomeController">
+   <children>
+      <VBox layoutX="15.0" layoutY="15.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="710.0" prefWidth="1004.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #3e3e3e;">
+               <children>
+                  <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="95.0" prefWidth="214.0" style="-fx-border-color: white; -fx-border-width: 0px 2px 0px 0px;">
+                     <children>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white; -fx-font-size: 2em;" text="Pankaja Tours" />
+                     </children>
+                  </HBox>
+                  <FontAwesomeIcon fill="WHITE" iconName="INDENT" size="2em">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </FontAwesomeIcon>
+                  <Text fx:id="lblSelection" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white; -fx-font-size: 1.8em;" text="Home" wrappingWidth="350.49812281131744">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Text>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="95.0" prefWidth="414.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <StackPane prefHeight="100.0" prefWidth="49.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="20.0" prefWidth="20.0" style="-fx-text-fill: black; -fx-background-color: white; -fx-background-radius: 100;" text="8">
+                                 <StackPane.margin>
+                                    <Insets bottom="40.0" left="30.0" />
+                                 </StackPane.margin>
+                              </Label>
+                              <FontAwesomeIcon fill="WHITE" iconName="BELL" size="2em" styleClass="cursor-hand" />
+                           </children>
+                        </StackPane>
+                        <FontAwesomeIcon fill="WHITE" iconName="GEAR" size="2em" styleClass="cursor-hand">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                        </FontAwesomeIcon>
+                        <FontAwesomeIcon fx:id="logout" fill="WHITE" iconName="SIGN_OUT" onMouseClicked="#logoutClicked" size="2em" styleClass="cursor-hand">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="40.0" top="10.0" />
+                           </HBox.margin>
+                        </FontAwesomeIcon>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox maxHeight="620.0" maxWidth="1014.0" prefHeight="615.0" prefWidth="1014.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <VBox prefHeight="615.0" prefWidth="214.0" style="-fx-background-color: #3e3e3e; -fx-border-color: white; -fx-border-width: 0px 2px 0px 0px;">
+                     <children>
+                        <HBox focusTraversable="true" prefHeight="66.0" prefWidth="146.0" style="-fx-background-color: white;">
+                           <padding>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </padding>
+                           <children>
+                              <TextField promptText="Search Here" style="-fx-background-radius: 10px;" />
+                              <Button mnemonicParsing="false">
+                                 <graphic>
+                                    <FontAwesomeIcon fill="#0ebdfe" iconName="SEARCH" />
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <HBox onMouseClicked="#tourManagementMouseClicked">
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <children>
+                              <FontAwesomeIcon fill="WHITE" iconName="LIST" size="1.4em" />
+                              <Text fx:id="lblTourManagement" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white; -fx-font-weight: bold;" text="Tour Management">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Text>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                           <styleClass>
+                              <String fx:value="cursor-hand" />
+                              <String fx:value="hover-border-right" />
+                              <String fx:value="hover-ash" />
+                           </styleClass>
+                        </HBox>
+                        <HBox onMouseClicked="#guestManagementClicked">
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <children>
+                              <FontAwesomeIcon fill="WHITE" iconName="USER" size="1.4em" />
+                              <Text fx:id="lblGuestManagement" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white; -fx-font-weight: bold;" text="Guest Management">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Text>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                           <styleClass>
+                              <String fx:value="cursor-hand" />
+                              <String fx:value="hover-border-right" />
+                              <String fx:value="hover-ash" />
+                           </styleClass>
+                        </HBox>
+                        <HBox onMouseClicked="#guideManagementClicked">
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <children>
+                              <FontAwesomeIcon fill="WHITE" iconName="MALE" size="1.4em" />
+                              <Text fx:id="lblGuideManagement" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white; -fx-font-weight: bold;" text="Guide Management">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Text>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                           <styleClass>
+                              <String fx:value="cursor-hand" />
+                              <String fx:value="hover-border-right" />
+                              <String fx:value="hover-ash" />
+                           </styleClass>
+                        </HBox>
+                        <HBox onMouseClicked="#hotelManagementClicked">
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <children>
+                              <FontAwesomeIcon fill="WHITE" iconName="UNIVERSITY" size="1.4em" />
+                              <Text fx:id="lblHotelManagement" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white; -fx-font-weight: bold;" text="Hotel Management">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Text>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                           <styleClass>
+                              <String fx:value="cursor-hand" />
+                              <String fx:value="hover-border-right" />
+                              <String fx:value="hover-ash" />
+                           </styleClass>
+                        </HBox>
+                        <HBox onMouseClicked="#vehicalManagementClicked">
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <children>
+                              <FontAwesomeIcon fill="WHITE" iconName="CAR" size="1.4em" />
+                              <Text fx:id="lblVehicalManagement" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white; -fx-font-weight: bold;" text="Vehical Management">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Text>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                           <styleClass>
+                              <String fx:value="cursor-hand" />
+                              <String fx:value="hover-border-right" />
+                              <String fx:value="hover-ash" />
+                           </styleClass>
+                        </HBox>
+                        <HBox onMouseClicked="#cityManagementClicked">
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <children>
+                              <FontAwesomeIcon fill="WHITE" iconName="MAP_MARKER" size="1.4em" />
+                              <Text fx:id="lblCityManagement" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white; -fx-font-weight: bold;" text="City Management">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Text>
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                           <styleClass>
+                              <String fx:value="cursor-hand" />
+                              <String fx:value="hover-border-right" />
+                              <String fx:value="hover-ash" />
+                           </styleClass>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <AnchorPane fx:id="paneHome" maxHeight="615.0" maxWidth="800.0" minHeight="615.0" minWidth="800.0" prefHeight="615.0" prefWidth="800.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <ImageView fitHeight="185.0" fitWidth="493.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/Sri-Lanka_Tour_Packages.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="513.0" fitWidth="344.0" layoutX="456.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/map.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="160.0" fitWidth="351.0" layoutX="452.0" layoutY="455.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/things%20to%20do%203.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="317.0" fitWidth="454.0" layoutY="312.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/BofSL.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" layoutY="190.0" prefHeight="110.0" prefWidth="474.0" text="Pankaja Travels" textFill="#243bc7">
+                           <font>
+                              <Font name="Microsoft Himalaya" size="96.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</AnchorPane>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="615.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.pankajatravel.controller.AirportManagementController">
+   <children>
+      <HBox layoutX="10.0" layoutY="10.0" prefHeight="615.0" prefWidth="800.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="615.0" prefWidth="300.0">
+               <children>
+                  <ImageView fitHeight="637.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/airport-pic%20edit.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="615.0" prefWidth="500.0">
+               <children>
+                  <Pane layoutX="14.0" layoutY="101.0" prefHeight="213.0" prefWidth="262.0">
+                     <children>
+                        <VBox alignment="TOP_CENTER" prefHeight="213.0" prefWidth="262.0">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <children>
+                              <JFXTextField fx:id="txtAirportID" labelFloat="true" onAction="#txtAirportIDAction" promptText="Airport ID">
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" left="10.0" right="10.0" top="20.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXTextField fx:id="txtName" labelFloat="true" layoutX="20.0" layoutY="30.0" onAction="#txtNameAction" promptText="Name">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </JFXTextField>
+                              <JFXTextField fx:id="txtLocation" labelFloat="true" layoutX="10.0" layoutY="71.0" onAction="#txtLocationAction" promptText="Location">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </JFXTextField>
+                           </children>
+                        </VBox>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="309.0" layoutY="114.0" prefHeight="201.0" prefWidth="177.0">
+                     <children>
+                        <VBox alignment="TOP_CENTER" prefHeight="201.0" prefWidth="177.0">
+                           <children>
+                              <JFXButton fx:id="btnAddAirport" buttonType="RAISED" onMouseClicked="#btnAddAirportMouseClicked" prefWidth="100.0" style="-fx-background-color: #DADADA;" text="Add Airport">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXButton>
+                              <JFXButton buttonType="RAISED" layoutX="72.0" layoutY="30.0" onMouseClicked="#btnUpdateMouseClicked" prefWidth="100.0" style="-fx-background-color: #DADADA;" text="Update">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXButton>
+                              <JFXButton buttonType="RAISED" layoutX="72.0" layoutY="76.0" onMouseClicked="#btnRemoveMouseClicked" prefHeight="26.0" prefWidth="100.0" style="-fx-background-color: #DADADA;" text="Remove">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXButton>
+                              <JFXButton buttonType="RAISED" layoutX="72.0" layoutY="101.0" onMouseClicked="#btnMoreDetailsMouseClicked" prefWidth="100.0" style="-fx-background-color: #DADADA;" text="More Details">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXButton>
+                           </children>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </VBox>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="85.0" prefWidth="500.0" style="-fx-background-color: #454545;">
+                     <children>
+                        <Label layoutX="36.0" layoutY="23.0" text="Airport Management" textFill="WHITE">
+                           <font>
+                              <Font name="Copperplate Gothic Bold" size="36.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <TableView fx:id="tblAirport" layoutX="23.0" layoutY="349.0" onMouseClicked="#tblAirportMouseClicked" prefHeight="248.0" prefWidth="457.0">
+                    <columns>
+                      <TableColumn prefWidth="129.60003662109375" text="Airport ID" />
+                      <TableColumn prefWidth="173.5999755859375" text="Name" />
+                        <TableColumn prefWidth="150.39996337890625" text="Location" />
+                    </columns>
+                  </TableView>
+                  <Label layoutX="63.0" layoutY="296.0" text="Airport Details">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIcon iconName="PLANE" layoutX="23.0" layoutY="335.0" size="3em" text="" />
+                  <Separator layoutX="307.0" layoutY="104.0" orientation="VERTICAL" prefHeight="201.0" prefWidth="0.0" />
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

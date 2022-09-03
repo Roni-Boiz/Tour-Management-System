@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="paneSignIn" prefHeight="512.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.pankajatravel.controller.SignInController">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="512.0" prefWidth="800.0">
+         <children>
+            <ImageView fitHeight="512.0" fitWidth="386.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <image>
+                  <Image url="@../img/Blue%20door.jpg" />
+               </image>
+               <effect>
+                  <Bloom threshold="0.4" />
+               </effect>
+            </ImageView>
+            <Label layoutX="49.0" layoutY="308.0" prefHeight="66.0" prefWidth="307.0" text="Welcome to Pankaja Travels" textFill="WHITE">
+               <font>
+                  <Font name="Bell MT Bold" size="23.0" />
+               </font>
+            </Label>
+            <JFXButton buttonType="RAISED" contentDisplay="RIGHT" layoutX="78.0" layoutY="383.0" onAction="#btnLogInAction" prefHeight="26.0" prefWidth="222.0" style="-fx-background-color: #D30000;" styleClass="cursor-hand" text="LogIn" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIcon fill="WHITE" iconName="USER" size="2em" wrappingWidth="28.228559494018555" />
+               </graphic>
+            </JFXButton>
+            <AnchorPane layoutX="419.0" layoutY="61.0" prefHeight="401.0" prefWidth="342.0" style="-fx-background-color: #0067C3;">
+               <children>
+                  <JFXButton fx:id="btnSignIn" buttonType="RAISED" contentDisplay="RIGHT" layoutX="55.0" layoutY="332.0" onAction="#btnSignInAction" prefHeight="26.0" prefWidth="235.0" style="-fx-background-color: #e45652;" styleClass="cursor-hand" text="Create Account" textFill="WHITE">
+                     <graphic>
+                        <FontAwesomeIcon fill="WHITE" iconName="SIGN_IN" size="2em" wrappingWidth="22.228562831878662" />
+                     </graphic>
+                  </JFXButton>
+                  <Label layoutX="98.0" layoutY="23.0" prefHeight="18.0" prefWidth="150.0" style="-fx-alignment: center;" text="Sign In" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Bodoni MT Condensed" size="37.0" />
+                     </font>
+                  </Label>
+                  <Text fill="WHITE" layoutX="56.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Name/Email" wrappingWidth="131.2000036239624" />
+                  <FontAwesomeIcon fill="WHITE" iconName="USER" layoutX="186.0" layoutY="105.0" size="2em" text="" wrappingWidth="22.228559494018555" />
+                  <Text fill="WHITE" layoutX="56.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" wrappingWidth="103.73675537109375" />
+                  <FontAwesomeIcon fill="WHITE" iconName="EYE_SLASH" layoutX="130.0" layoutY="182.0" size="2em" />
+                  <TextField fx:id="txtUserName" layoutX="56.0" layoutY="117.0" onAction="#txtUserNameAction" prefHeight="26.0" prefWidth="235.0" promptText="USER NAME" />
+                  <PasswordField fx:id="txtPassword" layoutX="55.0" layoutY="193.0" onAction="#txtPasswordAction" prefHeight="26.0" prefWidth="235.0" promptText="PASSWORD" />
+                  <Label layoutX="56.0" layoutY="243.0" text="Confirm Password" textFill="WHITE" />
+                  <FontAwesomeIcon fx:id="iconConfirm" fill="#00ff4d" iconName="CHECK_SQUARE_ALT" layoutX="298.0" layoutY="292.0" size="2em" visible="false" />
+                  <PasswordField fx:id="txtConfirmPassword" layoutX="55.0" layoutY="270.0" onAction="#txtConfirmPasswordAction" onKeyReleased="#txtConfirmPasswordKeyReleased" prefHeight="26.0" prefWidth="235.0" promptText="CONFIRM PASSWORD" />
+               </children>
+            </AnchorPane>
+            <FontAwesomeIcon fill="#ff2121" iconName="TIMES_CIRCLE_ALT" layoutX="755.0" layoutY="45.0" onMouseClicked="#closeMouseClicked" size="3em" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.pankajatravel.controller.ViewAllVehiclesController">
+   <children>
+      <Label layoutX="86.0" layoutY="20.0" prefHeight="36.0" prefWidth="246.0" text="Vehical Details">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <FontAwesomeIcon iconName="CAR" layoutX="35.0" layoutY="62.0" size="36px" />
+      <TableView fx:id="tblVehicle" layoutX="35.0" layoutY="91.0" prefHeight="598.0" prefWidth="950.0" tableMenuButtonVisible="true">
+        <columns>
+          <TableColumn prefWidth="80.80001449584961" text="Vehicle ID" />
+          <TableColumn prefWidth="120.00003051757812" text="Vehicle Number" />
+            <TableColumn prefWidth="79.20002746582031" text="Category" />
+            <TableColumn prefWidth="64.0" text="YOM" />
+            <TableColumn prefWidth="116.79998779296875" text="Name" />
+            <TableColumn minWidth="0.0" prefWidth="104.800048828125" text="Price per 1Km" />
+            <TableColumn prefWidth="89.5999755859375" text="Owner" />
+            <TableColumn prefWidth="121.59991455078125" text="Owner Name" />
+            <TableColumn prefWidth="153.5999755859375" text="Owner Mobile No" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

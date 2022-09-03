@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="paneLogIn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="512.0" prefWidth="800.0" style="-fx-background-color: #ECEDEA;" stylesheets="@../styles/login.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.pankajatravel.controller.LogInController">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="512.0" prefWidth="800.0">
+         <children>
+            <ImageView fitHeight="512.0" fitWidth="386.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <image>
+                  <Image url="@../img/Blue%20door.jpg" />
+               </image>
+               <effect>
+                  <Bloom threshold="0.4" />
+               </effect>
+            </ImageView>
+            <Label layoutX="49.0" layoutY="308.0" prefHeight="66.0" prefWidth="307.0" text="Welcome to Pankaja Travels" textFill="WHITE">
+               <font>
+                  <Font name="Bell MT Bold" size="23.0" />
+               </font>
+            </Label>
+            <JFXButton buttonType="RAISED" contentDisplay="RIGHT" layoutX="78.0" layoutY="383.0" onAction="#btnSignUpAction" prefHeight="26.0" prefWidth="222.0" style="-fx-background-color: #D30000;" styleClass="cursor-hand" text="Sign Up" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIcon fill="WHITE" iconName="USER_PLUS" size="2em" wrappingWidth="28.228559494018555" />
+               </graphic></JFXButton>
+            <AnchorPane layoutX="419.0" layoutY="61.0" prefHeight="401.0" prefWidth="342.0" style="-fx-background-color: #0067C3;">
+               <children>
+                  <JFXButton fx:id="btnLogIn" buttonType="RAISED" contentDisplay="RIGHT" layoutX="56.0" layoutY="322.0" onAction="#btnLogInAction" prefHeight="26.0" prefWidth="235.0" style="-fx-background-color: #e45652;" styleClass="cursor-hand" text="Log In" textFill="WHITE">
+                     <graphic>
+                        <FontAwesomeIcon fill="WHITE" iconName="SIGN_IN" size="2em" wrappingWidth="22.228562831878662" />
+                     </graphic></JFXButton>
+                  <JFXButton layoutX="105.0" layoutY="364.0" onAction="#btnForgotPasswordAction" prefHeight="26.0" prefWidth="131.0" text="Forgot Password" textFill="WHITE" underline="true" wrapText="true">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></JFXButton>
+                  <Label layoutX="98.0" layoutY="23.0" prefHeight="18.0" prefWidth="150.0" style="-fx-alignment: center;" text="Log In" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Bodoni MT Condensed" size="37.0" />
+                     </font>
+                  </Label>
+                  <Text fill="WHITE" layoutX="56.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Name/Email" wrappingWidth="131.2000036239624" />
+                  <FontAwesomeIcon fill="WHITE" iconName="USER" layoutX="186.0" layoutY="105.0" size="2em" text="" wrappingWidth="22.228559494018555" />
+                  <Text fill="WHITE" layoutX="59.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" wrappingWidth="103.73675537109375" />
+                  <FontAwesomeIcon fill="WHITE" iconName="EYE_SLASH" layoutX="130.0" layoutY="182.0" size="2em" />
+                  <TextField fx:id="txtUserName" layoutX="56.0" layoutY="117.0" onAction="#txtUserNameAction" prefHeight="26.0" prefWidth="235.0" promptText="USER NAME" />
+                  <PasswordField fx:id="txtPassword" layoutX="55.0" layoutY="193.0" onAction="#txtPasswordAction" prefHeight="26.0" prefWidth="235.0" promptText="PASSWORD" />
+                  <ImageView fx:id="imgCapcha" fitHeight="44.0" fitWidth="115.0" layoutX="55.0" layoutY="231.0" pickOnBounds="true" />
+                  <TextField fx:id="txtCapcha" layoutX="55.0" layoutY="283.0" onAction="#txtCapchaAction" prefHeight="26.0" prefWidth="235.0" promptText="Enter the capcha" />
+                  <Button contentDisplay="RIGHT" layoutX="182.0" layoutY="241.0" mnemonicParsing="false" onMouseClicked="#refreshbtnMouseClicked" text="Refresh">
+                     <graphic>
+                        <FontAwesomeIcon iconName="SPINNER" />
+                     </graphic>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <FontAwesomeIcon fill="#ff2121" iconName="TIMES_CIRCLE_ALT" layoutX="755.0" layoutY="45.0" onMouseClicked="#closeMouseClicked" size="3em" />
+         </children>
+      </AnchorPane>
+   </children>
+   <rotationAxis>
+      <Point3D y="1.0" />
+   </rotationAxis>
+</AnchorPane>

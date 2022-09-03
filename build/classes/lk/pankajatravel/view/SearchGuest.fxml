@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<TabPane fx:id="tabPaneGuest" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1024.0" tabClosingPolicy="UNAVAILABLE" tabMinWidth="200.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.pankajatravel.controller.SearchGuestController">
+  <tabs>
+    <Tab text="Search Guest">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Pane minWidth="-Infinity" prefHeight="80.0" prefWidth="1024.0" style="-fx-background-color: #454545;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label fx:id="lblHeading1" layoutX="371.0" layoutY="18.0" text="Guest Details" textFill="WHITE">
+                           <font>
+                              <Font name="Copperplate Gothic Bold" size="36.0" />
+                           </font>
+                        </Label>
+                        <JFXButton defaultButton="true" onMouseClicked="#btnBackToGuestMouseClicked" prefHeight="79.0" prefWidth="182.0" text="Back to Guest Management" textFill="WHITE" wrapText="true">
+                           <graphic>
+                              <FontAwesomeIcon fill="WHITE" iconName="ARROW_CIRCLE_LEFT" size="4em" />
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                     </children>
+                  </Pane>
+                  <Text layoutX="91.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search Guest By" wrappingWidth="328.53675842285156">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Text>
+                  <JFXComboBox fx:id="cmbSearchOption" layoutX="91.0" layoutY="139.0" onKeyPressed="#cmbSearchOptionKeyPressed" prefHeight="26.0" prefWidth="262.0" promptText="Select an Option" />
+                  <TextField fx:id="txtSearchData" layoutX="387.0" layoutY="139.0" onAction="#txtSearchDataAction" prefHeight="26.0" prefWidth="202.0" promptText="Search" />
+                  <TableView fx:id="tblGuest" editable="true" fixedCellSize="-2.0" layoutX="41.0" layoutY="183.0" onMouseClicked="#tblGuestMouseClicked" pickOnBounds="false" prefHeight="482.0" prefWidth="951.0" tableMenuButtonVisible="true">
+                     <columns>
+                        <TableColumn minWidth="0.0" prefWidth="62.39999008178711" text="GstID" />
+                        <TableColumn minWidth="0.0" prefWidth="73.60000610351562" text="F_Name" />
+                        <TableColumn minWidth="0.0" prefWidth="68.79995727539062" text="L_Name" />
+                        <TableColumn minWidth="0.79998779296875" prefWidth="73.59999084472656" text="Country" />
+                        <TableColumn prefWidth="79.20001220703125" text="Mobile_No" />
+                        <TableColumn minWidth="0.0" prefWidth="55.20001220703125" text="Email" />
+                        <TableColumn prefWidth="77.60003662109375" text="Flight_No" />
+                        <TableColumn prefWidth="68.0" text="Airport" />
+                        <TableColumn prefWidth="76.79998779296875" text="Arrive_Date" />
+                        <TableColumn prefWidth="84.79998779296875" text="Arrived_Time" />
+                        <TableColumn minWidth="0.0" prefWidth="111.99993896484375" text="Deparcher_Date" />
+                        <TableColumn minWidth="0.0" prefWidth="99.199951171875" text="Deparcher_Time" />
+                     </columns>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </TableView>
+                  <FontAwesomeIcon iconName="SEARCH" layoutX="43.0" layoutY="126.0" size="3em" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Guest Details">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="690.0" prefWidth="1024.0">
+                     <children>
+                        <Label layoutX="364.0" layoutY="117.0" text="Search By Guest ID">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtSearchGuestID" layoutX="365.0" layoutY="135.0" onAction="#txtSearchGuestIDAction" prefHeight="26.0" prefWidth="254.0" />
+                        <JFXTextField fx:id="txtGstID" labelFloat="true" layoutX="164.0" layoutY="217.0" onAction="#txtGstIDActionPerformed" prefHeight="26.0" prefWidth="253.0" promptText="Guest ID">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtCountry" labelFloat="true" layoutX="579.0" layoutY="217.0" onAction="#txtCountryActionPerformed" prefHeight="26.0" prefWidth="254.0" promptText="Country">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtFName" labelFloat="true" layoutX="164.0" layoutY="282.0" onAction="#txtFNameActionPerformed" prefHeight="26.0" prefWidth="254.0" promptText="First Name">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtEmail" labelFloat="true" layoutX="579.0" layoutY="346.0" onAction="#txtEmailActionPerformed" prefHeight="26.0" prefWidth="254.0" promptText="Email Address">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtLName" labelFloat="true" layoutX="579.0" layoutY="282.0" onAction="#txtLNameActionPerformed" prefHeight="26.0" prefWidth="254.0" promptText="Last Name">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtMobileNo" labelFloat="true" layoutX="164.0" layoutY="346.0" onAction="#txtMobileNoActionPerformed" prefHeight="26.0" prefWidth="254.0" promptText="Mobile Number">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtFlightNo" labelFloat="true" layoutX="164.0" layoutY="410.0" onAction="#txtFlightNoActionPerformed" prefHeight="26.0" prefWidth="254.0" promptText="Flight Number">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXDatePicker fx:id="txtArriveDate" editable="false" layoutX="164.0" layoutY="473.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#txtArriveDateActionPerformed" prefHeight="28.0" prefWidth="254.0" />
+                        <JFXTimePicker fx:id="txtArriveTime" editable="false" layoutX="579.0" layoutY="473.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#txtArriveTimeActionPerformed" prefHeight="28.0" prefWidth="254.0" />
+                        <JFXDatePicker fx:id="txtDepartureDate" editable="false" layoutX="163.0" layoutY="543.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#txtDepartureDateActionPerformed" prefHeight="28.0" prefWidth="254.0" />
+                        <JFXTimePicker fx:id="txtDepartureTime" editable="false" layoutX="578.0" layoutY="543.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#txtDepartureTimeActionPerformed" prefHeight="28.0" prefWidth="254.0" />
+                        <Label layoutX="164.0" layoutY="453.0" text="Arrive Date">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="579.0" layoutY="453.0" text="Arrive Time">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="163.0" layoutY="521.0" text="Departure Date">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="578.0" layoutY="521.0" text="Departure Time">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Pane minWidth="-Infinity" prefHeight="79.0" prefWidth="1044.0" style="-fx-background-color: #454545;" AnchorPane.bottomAnchor="611.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-20.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label fx:id="lblHeading" layoutX="381.0" layoutY="20.0" text="Guest Details" textFill="WHITE">
+                                 <font>
+                                    <Font name="Copperplate Gothic Bold" size="36.0" />
+                                 </font>
+                              </Label>
+                              <JFXButton defaultButton="true" onMouseClicked="#btnBackMouseClicked" prefHeight="80.0" prefWidth="69.0" textFill="WHITE">
+                                 <graphic>
+                                    <FontAwesomeIcon fill="WHITE" iconName="ARROW_CIRCLE_LEFT" size="4em" />
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXButton>
+                           </children>
+                        </Pane>
+                        <Separator layoutY="178.0" prefHeight="1.0" prefWidth="1024.0" />
+                        <JFXButton fx:id="btnUpdate" buttonType="RAISED" defaultButton="true" layoutX="578.0" layoutY="617.0" onMouseClicked="#btnUpdateMouseClicked" prefHeight="26.0" prefWidth="148.0" style="-fx-background-color: #DADADA;" text="Update Guest" wrapText="true">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIcon iconName="USER_MD" size="1.5em" />
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="btnRemove" buttonType="RAISED" defaultButton="true" layoutX="270.0" layoutY="617.0" onMouseClicked="#btnRemoveMouseClicked" prefHeight="26.0" prefWidth="148.0" style="-fx-background-color: #DADADA;" text="Remove Guest" wrapText="true">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIcon iconName="USER_TIMES" size="1.5em" />
+                           </graphic>
+                        </JFXButton>
+                        <Label layoutX="579.0" layoutY="387.0" text="Airport">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <JFXComboBox fx:id="cmbAirport" layoutX="579.0" layoutY="413.0" prefHeight="26.0" prefWidth="254.0" />
+                        <JFXToggleButton fx:id="tBtnEdit" contentDisplay="BOTTOM" layoutX="854.0" layoutY="93.0" onAction="#tBtnEditAction" prefHeight="80.0" prefWidth="86.0" text="Edit" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </JFXToggleButton>
+                        <JFXButton buttonType="RAISED" layoutX="940.0" layoutY="615.0" onMouseClicked="#btnPrintMouseClicked" prefHeight="56.0" prefWidth="42.0" style="-fx-background-color: #DADADA;">
+                           <graphic>
+                              <FontAwesomeIcon iconName="PRINT" size="3em" />
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                     </children>
+                  </AnchorPane>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>

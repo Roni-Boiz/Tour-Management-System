@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<TabPane fx:id="tabPaneGuide" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1024.0" tabClosingPolicy="UNAVAILABLE" tabMinWidth="200.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.pankajatravel.controller.SearchGuideController">
+  <tabs>
+    <Tab text="Search Guide">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" pickOnBounds="false" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Pane minWidth="-Infinity" prefHeight="75.0" prefWidth="1024.0" style="-fx-background-color: #454545;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label fx:id="lblHeading1" layoutX="374.0" layoutY="18.0" text="Guide Details" textFill="WHITE">
+                           <font>
+                              <Font name="Copperplate Gothic Bold" size="36.0" />
+                           </font>
+                        </Label>
+                        <JFXButton alignment="CENTER" defaultButton="true" graphicTextGap="10.0" onMouseClicked="#btnBackToGuideMouseClicked" prefHeight="76.0" prefWidth="191.0" text="Back to Guide Management" textFill="WHITE" wrapText="true">
+                           <graphic>
+                              <FontAwesomeIcon fill="WHITE" iconName="ARROW_CIRCLE_LEFT" size="4em" />
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                     </children>
+                  </Pane>
+                  <Text layoutX="100.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search Guide By" wrappingWidth="328.53675842285156">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Text>
+                  <JFXComboBox fx:id="cmbSearchOption" layoutX="100.0" layoutY="145.0" onKeyPressed="#cmbSearchOptionKeyPressed" prefHeight="26.0" prefWidth="262.0" promptText="Select an Option" />
+                  <TextField fx:id="txtSearchData" layoutX="393.0" layoutY="145.0" onAction="#txtSearchDataAction" prefHeight="26.0" prefWidth="202.0" promptText="Search" />
+                  <TableView fx:id="tblGuide" editable="true" fixedCellSize="-2.0" layoutX="54.0" layoutY="206.0" onMouseClicked="#tblGuideMouseClicked" pickOnBounds="false" prefHeight="458.0" prefWidth="929.0" tableMenuButtonVisible="true">
+                     <columns>
+                        <TableColumn minWidth="0.0" prefWidth="60.00002670288086" text="Guide ID" />
+                        <TableColumn minWidth="0.0" prefWidth="69.5999755859375" text="F_Name" />
+                        <TableColumn minWidth="0.0" prefWidth="76.00004577636719" text="L_Name" />
+                        <TableColumn minWidth="0.79998779296875" prefWidth="86.40005493164062" text="NIC Number" />
+                        <TableColumn prefWidth="77.59991455078125" text="Address" />
+                        <TableColumn minWidth="0.0" prefWidth="124.80001831054688" text="Year of Experience" />
+                        <TableColumn prefWidth="122.4000244140625" text="Mobile Number" />
+                        <TableColumn prefWidth="104.0" text="Email" />
+                        <TableColumn prefWidth="91.99993896484375" text="Vehical" />
+                        <TableColumn prefWidth="100.0" text="Guide Licence" />
+                     </columns>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </TableView>
+                  <FontAwesomeIcon iconName="SEARCH" layoutX="54.0" layoutY="135.0" size="3em" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Update Guide Details">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="1024.0">
+               <children>
+                  <AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="690.0" prefWidth="1024.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Pane layoutX="10.0" layoutY="10.0" minWidth="-Infinity" prefHeight="75.0" prefWidth="1024.0" style="-fx-background-color: #454545;" AnchorPane.bottomAnchor="615.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label fx:id="lblHeading" layoutX="374.0" layoutY="18.0" text="Guide Details" textFill="WHITE">
+                                 <font>
+                                    <Font name="Copperplate Gothic Bold" size="36.0" />
+                                 </font>
+                              </Label>
+                              <JFXButton alignment="CENTER" defaultButton="true" onMouseClicked="#btnBackMouseClicked" prefHeight="76.0" prefWidth="69.0" textFill="WHITE">
+                                 <graphic>
+                                    <FontAwesomeIcon fill="WHITE" iconName="ARROW_CIRCLE_LEFT" size="4em" />
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXButton>
+                           </children>
+                        </Pane>
+                        <Label layoutX="386.0" layoutY="112.0" text="Search By Guide ID">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtSearchGuideID" layoutX="386.0" layoutY="130.0" onAction="#txtSearchGuideIDAction" prefHeight="26.0" prefWidth="254.0" />
+                        <JFXToggleButton fx:id="tBtnEdit" contentDisplay="BOTTOM" layoutX="849.0" layoutY="88.0" onAction="#tBtnEditAction" prefHeight="80.0" prefWidth="78.0" text="Edit" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXToggleButton>
+                        <Separator layoutX="1.0" layoutY="188.0" prefHeight="0.0" prefWidth="1024.0" />
+                        <JFXTextField fx:id="txtGidID" labelFloat="true" layoutX="172.0" layoutY="233.0" prefHeight="26.0" prefWidth="253.0" promptText="Guide ID">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtFName" labelFloat="true" layoutX="172.0" layoutY="298.0" prefHeight="26.0" prefWidth="254.0" promptText="First Name">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtMobileNo" labelFloat="true" layoutX="584.0" layoutY="428.0" prefHeight="26.0" prefWidth="254.0" promptText="Mobile Number" text="(+94)">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtAddress" labelFloat="true" layoutX="584.0" layoutY="363.0" prefHeight="26.0" prefWidth="254.0" promptText="Address">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtLName" labelFloat="true" layoutX="584.0" layoutY="298.0" prefHeight="26.0" prefWidth="254.0" promptText="Last Name">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtNICNumber" labelFloat="true" layoutX="172.0" layoutY="363.0" prefHeight="26.0" prefWidth="254.0" promptText="NIC Number">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtYearofExp" labelFloat="true" layoutX="172.0" layoutY="428.0" prefHeight="26.0" prefWidth="254.0" promptText="Years of Experience">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXButton fx:id="btnUpdate" buttonType="RAISED" defaultButton="true" layoutX="581.0" layoutY="620.0" onMouseClicked="#btnUpdateMouseClicked" prefHeight="26.0" prefWidth="148.0" style="-fx-background-color: #DADADA;" text="Update Guide" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIcon iconName="USER_MD" size="1.5em" />
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></JFXButton>
+                        <JFXButton fx:id="btnRemove" buttonType="RAISED" defaultButton="true" layoutX="275.0" layoutY="620.0" onMouseClicked="#btnRemoveMouseClicked" prefHeight="26.0" prefWidth="148.0" style="-fx-background-color: #DADADA;" text="Remove Guide" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIcon iconName="USER_TIMES" size="1.5em" />
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></JFXButton>
+                        <JFXTextField fx:id="txtEmailAddress" labelFloat="true" layoutX="171.0" layoutY="493.0" prefHeight="26.0" prefWidth="254.0" promptText="Email Address">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtVehicle" labelFloat="true" layoutX="584.0" layoutY="493.0" prefHeight="26.0" prefWidth="254.0" promptText="Vehicle">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXRadioButton fx:id="rBtnYes" layoutX="300.0" layoutY="564.0" text="Yes">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></JFXRadioButton>
+                        <JFXRadioButton fx:id="rBtnNo" layoutX="365.0" layoutY="564.0" prefHeight="18.0" prefWidth="46.0" text="No">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></JFXRadioButton>
+                        <Label layoutX="169.0" layoutY="563.0" prefHeight="20.0" prefWidth="135.0" text="Guide Licence" textFill="#4d4d4d">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <JFXButton buttonType="RAISED" defaultButton="true" layoutX="944.0" layoutY="626.0" onMouseClicked="#btnPrintMouseClicked" prefHeight="44.0" prefWidth="34.0" style="-fx-background-color: #DADADA;">
+                           <graphic>
+                              <FontAwesomeIcon iconName="PRINT" size="3em" />
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                     </children>
+                  </AnchorPane>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>

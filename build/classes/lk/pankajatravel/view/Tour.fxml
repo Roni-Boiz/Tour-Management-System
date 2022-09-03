@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="paneTour" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.pankajatravel.controller.TourController">
+   <children>
+      <Pane prefHeight="80.0" prefWidth="1024.0" style="-fx-background-color: #454545;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <JFXButton fx:id="btnBack" graphicTextGap="10.0" layoutY="1.0" onMouseClicked="#btnBackMouseClicked" prefHeight="80.0" prefWidth="172.0" text="Back to Tour Management" textFill="WHITE" wrapText="true">
+               <graphic>
+                  <FontAwesomeIcon fill="WHITE" iconName="ARROW_CIRCLE_LEFT" size="4em" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></JFXButton>
+            <Label layoutX="570.0" layoutY="20.0" text="Tour Details" textFill="WHITE">
+               <font>
+                  <Font name="Copperplate Gothic Bold" size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutY="80.0" prefHeight="329.0" prefWidth="529.0" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="80.0">
+         <children>
+            <Pane layoutX="28.0" layoutY="30.0" prefHeight="238.0" prefWidth="726.0" style="-fx-border-color: black;">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" text="Guest Details" underline="true">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="20.0" layoutY="65.0" text="Guest ID">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Label>
+                  <Label layoutX="340.0" layoutY="66.0" text="Full Name">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Label>
+                  <Label layoutX="22.0" layoutY="147.0" text="Arived Date">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Label>
+                  <Label layoutX="19.0" layoutY="184.0" text="Departure Date">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Label>
+                  <Label layoutX="22.0" layoutY="109.0" text="Flight Number">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Label>
+                  <Label layoutX="339.0" layoutY="147.0" text="Arived Time">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Label>
+                  <Label layoutX="339.0" layoutY="184.0" text="Departure Time">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Label>
+                  <Label layoutX="339.0" layoutY="109.0" text="Airport">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Label>
+                  <JFXComboBox fx:id="cmbGuestID" editable="true" layoutX="128.0" layoutY="61.0" onKeyPressed="#cmbGuestIDKeyPressed" prefHeight="25.0" prefWidth="186.0" promptText="ID" />
+                  <TextField fx:id="txtFlightNumber" disable="true" layoutX="128.0" layoutY="105.0" prefHeight="25.0" prefWidth="186.0" />
+                  <TextField fx:id="txtAirport" disable="true" layoutX="441.0" layoutY="105.0" prefHeight="25.0" prefWidth="205.0" />
+                  <TextField fx:id="txtAriveDate" disable="true" layoutX="128.0" layoutY="143.0" prefHeight="25.0" prefWidth="186.0" />
+                  <TextField fx:id="txtArivetime" disable="true" layoutX="441.0" layoutY="143.0" prefHeight="25.0" prefWidth="205.0" />
+                  <TextField fx:id="txtDepatureDate" disable="true" layoutX="128.0" layoutY="180.0" prefHeight="25.0" prefWidth="186.0" />
+                  <TextField fx:id="txtDepatureTime" disable="true" layoutX="441.0" layoutY="180.0" prefHeight="25.0" prefWidth="205.0" />
+                  <TextField fx:id="txtGuestName" disable="true" layoutX="441.0" layoutY="61.0" onAction="#txtGuestNameAction" prefHeight="25.0" prefWidth="205.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="786.0" layoutY="30.0" prefHeight="317.0" prefWidth="593.0" style="-fx-border-color: black;">
+               <children>
+                  <Label layoutX="20.0" layoutY="14.0" text="Tour Details" underline="true">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="18.0" layoutY="65.0" text="Tour ID">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="19.0" layoutY="101.0" text="Start Date">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="18.0" layoutY="142.0" prefHeight="17.0" prefWidth="108.0" text="Guest Pickup On">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="297.0" layoutY="100.0" text="End Date">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="297.0" layoutY="142.0" text="Guest Drop On">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="403.0" layoutY="186.0" text="No of Members">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="186.0" layoutY="186.0" text="No of Children">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="20.0" layoutY="186.0" text="No of Adults">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtTourID" layoutX="124.0" layoutY="61.0" onAction="#txtTourIDAction" prefHeight="25.0" prefWidth="162.0" />
+                  <JFXDatePicker fx:id="txtStartDate" editable="false" layoutX="124.0" layoutY="96.0" onAction="#txtStartDateAction" prefHeight="28.0" prefWidth="162.0" />
+                  <TextField fx:id="txtPickupOn" layoutX="124.0" layoutY="138.0" onAction="#txtPickupOnAction" prefHeight="25.0" prefWidth="162.0" />
+                  <TextField fx:id="txtDropOn" layoutX="396.0" layoutY="138.0" onAction="#txtDropOnAction" prefHeight="25.0" prefWidth="162.0" />
+                  <TextField fx:id="txtChilds" layoutX="323.0" layoutY="182.0" onAction="#txtChildsAction" prefHeight="25.0" prefWidth="51.0" />
+                  <TextField fx:id="txtMembers" layoutX="507.0" layoutY="182.0" prefHeight="25.0" prefWidth="51.0" />
+                  <TextField fx:id="txtAdults" layoutX="124.0" layoutY="182.0" onAction="#txtAdultsAction" prefHeight="25.0" prefWidth="51.0" />
+                  <Label layoutX="21.0" layoutY="279.0" text="Guide ID">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <JFXComboBox fx:id="cmbGuideID" layoutX="124.0" layoutY="275.0" onKeyPressed="#cmbGuideIDKeyPressed" prefHeight="25.0" prefWidth="162.0" promptText="ID" />
+                  <JFXDatePicker fx:id="txtEndDate" editable="false" layoutX="396.0" layoutY="95.0" onAction="#txtEndDateAction" prefHeight="28.0" prefWidth="162.0" />
+                  <Label layoutX="308.0" layoutY="279.0" text="Guide Name">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtGuideName" disable="true" layoutX="396.0" layoutY="275.0" prefHeight="25.0" prefWidth="162.0" />
+                  <Label layoutX="18.0" layoutY="235.0" text="No. of Rooms">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtNoOfRooms" layoutX="124.0" layoutY="231.0" onAction="#txtNoOfRoomsAction" prefHeight="25.0" prefWidth="51.0" />
+                  <JFXComboBox fx:id="cmbRoomType" focusColor="#405aa8" labelFloat="true" layoutX="186.0" layoutY="231.0" onKeyPressed="#cmbRoomTypeKeyPressed" prefHeight="25.0" prefWidth="186.0" promptText="Room Type" />
+                  <JFXComboBox fx:id="cmbMealType" labelFloat="true" layoutX="403.0" layoutY="231.0" onKeyPressed="#cmbMealTypeKeyPressed" prefHeight="25.0" prefWidth="155.0" promptText="Meal Type" />
+               </children>
+            </Pane>
+            <TableView fx:id="tblTourDetails" editable="true" layoutX="28.0" layoutY="287.0" onMouseClicked="#tblTourDetailsMouseClicked" prefHeight="278.0" prefWidth="726.0">
+              <columns>
+                <TableColumn prefWidth="145.59997177124023" text="Date" />
+                <TableColumn prefWidth="187.20005798339844" text="Place" />
+                  <TableColumn minWidth="4.0" prefWidth="187.199951171875" text="No_of_Nights" />
+                  <TableColumn prefWidth="202.4000244140625" text="Hotel" />
+              </columns>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </TableView>
+            <Pane layoutX="786.0" layoutY="346.0" prefHeight="269.0" prefWidth="375.0" style="-fx-border-color: black;">
+               <children>
+                  <Label layoutX="32.0" layoutY="41.0" text="Select Date">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="31.0" layoutY="92.0" text="Select Place">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <JFXDatePicker fx:id="txtvisitDate" layoutX="173.0" layoutY="36.0" onAction="#txtvisitDateAction" prefHeight="28.0" prefWidth="161.0" />
+                  <JFXComboBox fx:id="cmbVisitPlace" editable="true" layoutX="175.0" layoutY="88.0" onKeyPressed="#cmbVisitPlaceKeyPressed" onKeyReleased="#cmbVisitPlaceKeyRelease" prefHeight="25.0" prefWidth="155.0" promptText="select" />
+                  <Label layoutX="31.0" layoutY="148.0" text="Number of Nights">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtNoNights" layoutX="175.0" layoutY="144.0" onAction="#txtNoNightsAction" prefHeight="25.0" prefWidth="155.0" />
+                  <Label layoutX="31.0" layoutY="196.0" text="Hotel">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <JFXComboBox fx:id="cmbHotel" editable="true" layoutX="175.0" layoutY="192.0" onKeyPressed="#cmbHotelKeyPressed" onKeyReleased="#cmbHotelKeyRelease" prefHeight="25.0" prefWidth="155.0" promptText="select" />
+               </children>
+            </Pane>
+            <JFXButton fx:id="btnConfirm" buttonType="RAISED" layoutX="1229.0" layoutY="554.0" onMouseClicked="#btnConfirmMouseClicked" prefHeight="25.0" prefWidth="108.0" style="-fx-background-color: #DADADA;" text="Confirm">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btnCancle" buttonType="RAISED" layoutX="1229.0" layoutY="478.0" onMouseClicked="#btnCancleMouseClicked" prefHeight="25.0" prefWidth="108.0" style="-fx-background-color: #DADADA;" text="Cancle">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btnPrint" buttonType="RAISED" layoutX="1229.0" layoutY="400.0" onMouseClicked="#btnPrintMouseClicked" prefHeight="25.0" prefWidth="108.0" style="-fx-background-color: #DADADA;" text="Print">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Button defaultButton="true" layoutX="239.0" layoutY="575.0" mnemonicParsing="false" onMouseClicked="#btnClearAllMouseClicked" prefHeight="56.0" prefWidth="96.0" text="Clear All">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button defaultButton="true" layoutX="469.0" layoutY="575.0" mnemonicParsing="false" onMouseClicked="#btnRemoveRowMouseClicked" prefHeight="56.0" prefWidth="96.0" text="Remove Selected Row" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
