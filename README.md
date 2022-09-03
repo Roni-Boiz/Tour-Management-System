@@ -1,7 +1,7 @@
 # Tour-Management-System
 In this repository I have build desktop application to manage tours recevied and confirmed by the guest in tour/travel agency.
 Here you can manage tours, manage guests, manage guides, manage registed hotels, manage vehicles, manage places visit by guests, and create tour reports. 
-Apart from that all forms are validated and user friendly. To log into the system you must have valid login credential other wise you have to create a account for you by create account form.
+Apart from that all forms are validated and user friendly. To log into the system you must have valid login credential other wise you have to create a account for you by sign up form.
 
 ### Setup the environment 🛠
 Before you run this project make sure you have satisfy following conditions,
