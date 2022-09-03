@@ -1,14 +1,14 @@
 # Tour-Management-System
 In this repository I have build desktop application to manage tours recevied and confirmed by the guest in tour/travel agency.
 Here you can manage tours, manage guests, manage guides, manage registed hotels, manage vehicles, manage places visit by guests, and create tour reports. 
-Apart from that all forms are validated and user friendly. To log into the system you must have valid login credential other wise you have to create a account for you by vreate account form.
+Apart from that all forms are validated and user friendly. To log into the system you must have valid login credential other wise you have to create a account for you by create account form.
 
 ### Setup the environment 🛠
 Before you run this project make sure you have satisfy following conditions,
 
 1. Install Java version 1.8.0/(above) type `java -version` in cmd to verify
 2. Install MySQL Server version 8.0.15/(above) type `mysql -V` or `SELECT VERSION()` to verify
-3. Import this [Database](/smartmultiplug.sql) to your MySQL server (after import no need to keep that file in your project directory)
+3. Import this [Database](/projecttour.sql) to your MySQL server (after import no need to keep that file in your project directory)
 4. Try to open the project in your favourite text editor eg:- NetBeans IDE, if you don't see any warning or errors your are good to go
 
 ### Setting up the database connection 🔌
