@@ -34,4 +34,23 @@ There is different ways to test and run project
 1. Open project in text editor(IDE) eg:-NetBeans IDE, press `F6` or `Play button`
 2. Double click [jar file](/dist/SmartMultiplug.jar) in ProjectTour/dist/ProjectTour.jar 
 
+## User Interfaces
+
+![1](https://github.com/user-attachments/assets/3fc268cf-0a6f-4db3-b965-c82b207a9a28)
+
+![2](https://github.com/user-attachments/assets/bb9092e7-34d7-499a-b1e8-1c4217e620b5)
+
+![3](https://github.com/user-attachments/assets/b84b2708-4bfb-4c5f-821b-4351d209bbbf)
+
+![4](https://github.com/user-attachments/assets/a7d2ff5a-c51a-440c-8781-51edf82e596a)
+
+![5](https://github.com/user-attachments/assets/c6af9d13-78a6-47d6-9b33-5166689eef81)
+
+![6](https://github.com/user-attachments/assets/41a71e61-43cd-472f-b0db-6e209647e4f5)
+
+![7](https://github.com/user-attachments/assets/8839e5d9-d989-44d2-9ba8-ae7405861d43)
+
+![8](https://github.com/user-attachments/assets/88c87300-cb0b-4bc8-a296-2411b6adb067)
+
+![9](https://github.com/user-attachments/assets/5edfda8a-5512-4237-a727-946c80dc09d5)
 
